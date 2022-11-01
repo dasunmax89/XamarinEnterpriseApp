@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.LegendListItemCell"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core">
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="CenterAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Margin="0" Padding="0"
+                 HeightRequest="30">
+        <Grid    VerticalOptions="CenterAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 RowSpacing="0" 
+                 Margin="0,0" x:Name="GridButton"
+                 IsVisible="{Binding IsAccessibilityOn, Converter={StaticResource InverseBoolConverter}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="35"/>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0"
+                   WidthRequest="24"
+                   HeightRequest="24"
+                   Source="{Binding ImageSource}"
+                   HorizontalOptions="Start" 
+                   VerticalOptions="CenterAndExpand" >
+                <Image.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" iOS="5, 0,5, 0" Android="5, 0, 5, 0" />
+                </Image.Margin>
+            </Image>
+            <Label Grid.Column="1"
+                   Text="{Binding Header}" 
+                   VerticalOptions="CenterAndExpand"
+                   Margin="0,0,0,2" 
+                   Style="{StaticResource LegendHeaderStyle}"
+                   HorizontalOptions="StartAndExpand"/>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Selected_ButtonClcked" />
+            </Grid.GestureRecognizers>
+        </Grid>
+        <controls:ExtendedButton TextAlignment="Start"
+                                 IsVisible="{Binding IsAccessibilityOn}" Text="{Binding Header}"
+                                 x:Name="AccesibilityButton"
+                                 VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
+                                 Style="{StaticResource CommonListLabelButtonStyle}"
+                                 Margin="0,0,0,2"  Clicked="Selected_ButtonClcked" />
+    </StackLayout>
+</ContentView>

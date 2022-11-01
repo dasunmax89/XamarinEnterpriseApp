@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.ActionSheetPopupView"
+        xmlns:views="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:viewModelBase="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.ViewModels.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:baseView="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        xmlns:behaviors="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Behaviors;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+        AbsoluteLayout.LayoutFlags="All" Margin="0,0"
+        HorizontalOptions="CenterAndExpand" VerticalOptions="End"
+        BackgroundColor="Transparent">
+    <controls:ExtendedFrame HasShadow="false" HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center" BorderColor="{StaticResource GrayColor}"
+            CornerRadius="0" BackgroundColor="{StaticResource WhiteColor}"
+            Padding="0,1">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+                BackgroundColor="White" Orientation="Vertical" Margin="0,0">
+            <StackLayout HorizontalOptions="FillAndExpand" Margin="5,2,5,2"
+                    Orientation="Horizontal">
+                <Label Style="{StaticResource PopupHeaderStyle}"
+                        x:Name="TitleLabel" FontSize="Medium"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="{local:Translate SelectItem}"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="{local:Translate Header}"
+                        AutomationProperties.HelpText="{OnPlatform iOS={local:Translate SelectItem}}"/>
+                <ImageButton Source="closeIcon_gray.png" x:Name="CloseButton"
+                        VerticalOptions="CenterAndExpand" Margin="5,5"
+                        BackgroundColor="Transparent"
+                        Clicked="OnCloseButtonTapped" HeightRequest="24"
+                        WidthRequest="24"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="{local:Translate CloseButton}"
+                         />
+            </StackLayout>
+            <ListView x:Name="PopupListView"
+                    ItemsSource="{Binding ActionListItems}" HasUnevenRows="true"
+                    HorizontalOptions="FillAndExpand" SeparatorVisibility="None"
+                    VerticalOptions="Center" BackgroundColor="Transparent"
+                    HeightRequest="120" Margin="5,2,5,2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <templates:ActionListItemCell />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Behaviors>
+                    <behaviors:EventToCommandBehavior EventName="ItemTapped"
+                            Command="{Binding ActionItemTappedCommand}"
+                            CommandParameter="{Binding .}">
+                    </behaviors:EventToCommandBehavior>
+                </ListView.Behaviors>
+            </ListView>
+        </StackLayout>
+    </controls:ExtendedFrame>
+</ContentView>

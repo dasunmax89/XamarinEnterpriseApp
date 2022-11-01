@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.MapViewIOS"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+        BackgroundColor="Transparent">
+    <controls:ExtendedMapIOS HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" x:Name="Map"
+            BindingContext="{Binding}" AutomationProperties.IsInAccessibleTree="True">
+    </controls:ExtendedMapIOS>
+</ContentView>

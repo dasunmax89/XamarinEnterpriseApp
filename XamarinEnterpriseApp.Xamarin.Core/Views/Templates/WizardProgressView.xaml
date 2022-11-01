@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.WizardProgressView"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        HorizontalOptions="FillAndExpand">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <StackLayout Grid.Row="0" Orientation="Horizontal" VerticalOptions="Center"
+            HorizontalOptions="Start" IsVisible="{Binding IsTopBackButtonVisible}" >
+        <ImageButton x:Name="BackButton" VerticalOptions="CenterAndExpand"
+                Margin="5,5" BackgroundColor="Transparent"
+                HorizontalOptions="Start"
+                Clicked="BackButton_Clicked"
+                AutomationId="Wizard_Back_Button"
+                HeightRequest="24" WidthRequest="24"
+                AutomationProperties.IsInAccessibleTree="True"
+                AutomationProperties.Name="{local:Translate BackButton}"
+                AutomationProperties.HelpText="{local:Translate BackToPreviousScreen}">
+            <ImageButton.Source>
+                <OnPlatform x:TypeArguments="ImageSource"
+                        iOS="arrow_gray.png" Android="arrow_gray.png" />
+            </ImageButton.Source>
+        </ImageButton>
+    </StackLayout>
+    <Label Grid.Row="0" HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand" Text="{Binding ProgressText}"
+            x:Name="CaptionLabel" Style="{StaticResource PageHeaderStyle}"
+            HorizontalTextAlignment="Center" Margin="5,5"
+            AutomationProperties.IsInAccessibleTree="True"
+            AutomationProperties.HelpText="{Binding ProgressText}" />
+    <ImageButton Grid.Row="0" Source="closeIcon_gray.png" x:Name="CloseButton"
+        HorizontalOptions="End" VerticalOptions="EndAndExpand"
+        Margin="0,5,5,5" BackgroundColor="Transparent"
+        AutomationId="Header_Close_Button" HeightRequest="24"
+        WidthRequest="24" Clicked="CloseButton_Clicked"
+        AutomationProperties.IsInAccessibleTree="True"
+        AutomationProperties.Name="{local:Translate CloseButton}"
+        AutomationProperties.HelpText="{local:Translate AbortNewReportCreation}"/>
+</Grid>

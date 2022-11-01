@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.FooterView"
+        xmlns:views="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:effects="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Effects;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        HorizontalOptions="FillAndExpand" Padding="0,5"
+        BackgroundColor="{Binding AppFooterColor}">
+    <StackLayout HorizontalOptions="FillAndExpand" Margin="0,0"
+            Orientation="Horizontal">
+        <ImageButton x:Name="LeftButton" VerticalOptions="CenterAndExpand"
+                Margin="0,5,5,5" HorizontalOptions="Start"
+                AutomationId="Footer_Back_Button" HeightRequest="56"
+                WidthRequest="56" Source="backButton.png"
+                Command="{Binding LeftCommand}"
+                IsEnabled="{Binding LeftFooterButtonEnabled}"
+                IsVisible="{Binding LeftFooterButtonVisible}"
+                BackgroundColor="Transparent" Aspect="AspectFill"
+                AutomationProperties.IsInAccessibleTree="True"
+                AutomationProperties.Name="{local:Translate BackButton}"
+                AutomationProperties.HelpText="{local:Translate GotoPreviousStep}">
+        </ImageButton>
+        <controls:ExtendedButton  x:Name="RightButton"
+                Command="{Binding RightCommand}"
+                HelpText = "{Binding RightCommandHelpText}"
+                Text="{Binding RightCommandText}"
+                ActiveStyle="{StaticResource FormButtonBlueStyle}"
+                DisabledStyle="{StaticResource FormButtonBlueDisabledStyle}"
+                Style="{StaticResource FormButtonBlueDisabledStyle}"
+                IsEnabledCustom="{Binding RightFooterButtonEnabled}"
+                VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                Margin="0,5,0,5"
+                AutomationProperties.IsInAccessibleTree="True"
+                IsVisible="{Binding RightFooterButtonVisible}"
+                HeightRequest="56" >
+        </controls:ExtendedButton>
+    </StackLayout>
+</ContentView>

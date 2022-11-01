@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<baseView:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.HomeView"
+        xmlns:views="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:viewModelBase="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.ViewModels.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:baseView="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        xmlns:behaviors="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Behaviors;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:effects="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Effects;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        viewModelBase:ViewModelLocator.AutoWireViewModel="true"
+        ios:Page.UseSafeArea="true" NavigationPage.HasNavigationBar="false"
+        BackgroundColor="{StaticResource AppBeigeColor}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0"
+                Default="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <Grid x:Name="MainGrid" AutomationProperties.IsInAccessibleTree="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" x:Name="ContentWrapper">
+            <Grid.Margin>
+                <OnPlatform x:TypeArguments="Thickness" iOS="0" Android="0" />
+            </Grid.Margin>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <templates:HeaderView Grid.Row="0" ButtonPanelVisibleItems=""
+                    BindingContext="{Binding}"
+                    ImageIcon="{Binding LogoImageString}" x:Name="HeaderBar">
+                <templates:HeaderView.Effects>
+                <effects:ViewShadowEffect DistanceX="0"  DistanceY="30"
+                                          Color="{StaticResource AppRedColor}" Radius="10"/>
+                </templates:HeaderView.Effects>
+            </templates:HeaderView>
+            <ScrollView Grid.Row="1" HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Style="{StaticResource ScrollViewStyle}"
+                    Orientation="Vertical">
+                <Grid>
+                    <Grid.RowDefinitions>
+                         <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                </Grid>
+            </ScrollView>
+        </Grid>
+        <templates:ActivityIndicatorView Grid.Row="0" IsBusy="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}">
+        </templates:ActivityIndicatorView>
+    </Grid>
+</baseView:BaseContentPage>

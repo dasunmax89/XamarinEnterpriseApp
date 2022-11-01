@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.MapViewAndroid"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        AutomationProperties.IsInAccessibleTree="False">
+    <controls:ExtendedMapDroid HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" x:Name="Map" IsShowingUser="true"
+            MapType="Street" HasZoomEnabled="true" BindingContext="{Binding}"
+            AutomationProperties.IsInAccessibleTree="False"
+            >
+    </controls:ExtendedMapDroid>
+</ContentView>

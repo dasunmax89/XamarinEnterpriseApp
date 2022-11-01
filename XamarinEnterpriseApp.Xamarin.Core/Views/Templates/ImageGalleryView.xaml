@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.ImageGalleryView"
+        xmlns:views="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:viewModelBase="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.ViewModels.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:baseView="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        xmlns:effects="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Effects;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        HorizontalOptions="FillAndExpand" BackgroundColor="Black"
+        VerticalOptions="FillAndExpand">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image  x:Name="ImageView" Grid.Row="0" VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"
+                Aspect="AspectFit">
+            <Image.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped" />
+                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped" />
+                <SwipeGestureRecognizer Direction="Down" Swiped="OnSwiped" />
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Image.GestureRecognizers>
+        </Image>
+        <StackLayout  Grid.Row="0" VerticalOptions="End"
+                HorizontalOptions="FillAndExpand" Margin="10,10"
+                BackgroundColor="Transparent" Orientation="Horizontal">
+            <StackLayout x:Name="DotContainer" Orientation="Horizontal"
+                    HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+                    BackgroundColor="Transparent">
+            </StackLayout>
+            <ImageButton  x:Name="DeleteButton" Source="deletePhotoIcon_red.png"
+                    VerticalOptions="Center" BackgroundColor="Transparent"
+                    HorizontalOptions="End" Clicked="Delete_ButtonClcked"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{local:Translate DeleteButton}"
+                    HeightRequest="24" WidthRequest="24">
+            </ImageButton>
+            <ImageButton  x:Name="CloseButton" Source="Arrow_back.png"
+                    VerticalOptions="Center" BackgroundColor="Transparent"
+                    HorizontalOptions="End" Clicked="Close_ButtonClcked"
+                    HeightRequest="24" WidthRequest="24"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{local:Translate CloseButton}">
+            </ImageButton>
+        </StackLayout>
+    </Grid>
+</ContentView>

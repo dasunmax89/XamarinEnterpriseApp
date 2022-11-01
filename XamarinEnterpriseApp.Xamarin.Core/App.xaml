@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.App"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:converters="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Converters;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        ios:Application.EnableAccessibilityScalingForNamedFontSizes="True">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- CONVERTERS -->
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+            <converters:MapIconConverter x:Key="MapIconConverter" />
+            <converters:FormMapsPositionConverter x:Key="FormMapsPositionConverter" />
+            <converters:GMapsPositionConverter x:Key="GMapsPositionConverter" />
+            <converters:ImageSourceConverter x:Key="ImageSourceConverter" />
+            <converters:StringNullOrEmptyBoolConverter x:Key="StringNullOrEmptyBoolConverter" />
+
+            <!-- COLORS -->
+            <Color x:Key="AppTitleBarColor">#63DF85</Color>
+            <Color x:Key="AppTitleTextColor">#000000</Color>
+            <Color x:Key="AppBackgroundColor">#ebe7e2</Color>
+            <Color x:Key="AppFooterColor">#ffffff</Color>
+            <Color x:Key="AppPrimaryTextColor">#000000</Color>
+            <Color x:Key="EntryBackgroundColor">#F1F3F5</Color>
+            <Color x:Key="EntryBorderColor">#d8d8d8</Color>
+            <Color x:Key="EntryPlaceholderColor">#999999</Color>
+            <Color x:Key="EntryTextColor">#2f5270</Color>
+            <Color x:Key="ModalBackgroundColor">#CC000000</Color>
+            <Color x:Key="ProgressIndicatorColor">#25557d</Color>
+            <Color x:Key="ListItemSeparatorColor">#E7E7E7</Color>
+            <Color x:Key="MenuSectionSeparatorColor">#9f9f9f</Color>
+            <Color x:Key="HyperlinkColor">#4f79a2</Color>
+            <Color x:Key="FormItemCaptionColor">#000000</Color>
+            <Color x:Key="ActionSheetPopupColor">#000000</Color>
+            <Color x:Key="CategoryListViewBGColor">#FAFAFA</Color>
+            <Color x:Key="MenuBackgroundColor">#63DF85</Color>
+            <Color x:Key="MenuSeparatorColor">#FAFAFA</Color>
+            <Color x:Key="MenuTextColor">#000000</Color>
+
+            <Color x:Key="WhiteColor">#ffffff</Color>
+            <Color x:Key="BlackColor">#000000</Color>
+            <Color x:Key="GrayColor">#e2e2e2</Color>
+            <Color x:Key="AppLightGrayColor">#F1F3F5</Color>
+            <Color x:Key="ErrorColor">#d00000</Color>
+            <Color x:Key="AppBlueColor">#0775DB</Color>
+            <Color x:Key="AppLightBlueColor">#9CC8F1</Color>
+            <Color x:Key="AppOrangeColor">#FF9900</Color>
+            <Color x:Key="AppGreenColor">#63DF85</Color>
+            <Color x:Key="AppRedColor">#F11D00</Color>
+            <Color x:Key="AppDarkGrayColor">#313143</Color>
+            <Color x:Key="AppBlackColor">#000000</Color>
+             <Color x:Key="AppBeigeColor">#ECE7E2</Color>
+
+
+            <Color x:Key="AppGrayColor">#7E7E7E</Color>
+            <Color x:Key="AppBlueGrayColor">#5B7185</Color>
+            <Color x:Key="AppSummaryEditBlueColor">#0775DB</Color>
+
+            
+            <!--End of Colors-->
+            <!--Font Sizes-->
+            <!--End Font Sizes-->
+            <!--Sizes-->
+            <OnPlatform x:Key="TextEntryHeight" x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="48" />
+                <On Platform="Android" Value="48" />
+            </OnPlatform>
+            <OnPlatform x:Key="DropdownHeight" x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="50" />
+                <On Platform="Android" Value="50" />
+            </OnPlatform>
+            <OnPlatform x:Key="ButtonHeight" x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="48" />
+                <On Platform="Android" Value="40" />
+            </OnPlatform>
+            <OnPlatform x:Key="ClearButtonHeight" x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="40" />
+                <On Platform="Android" Value="40" />
+            </OnPlatform>
+            <OnPlatform x:Key="FooterHeight" x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="56" />
+                <On Platform="Android" Value="56" />
+            </OnPlatform>
+            <OnPlatform x:Key="ListItemHeight" x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="60" />
+                <On Platform="Android" Value="60" />
+            </OnPlatform>
+            <OnPlatform x:Key="TreeListItemHeight" x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="40" />
+                <On Platform="Android" Value="40" />
+            </OnPlatform>
+            <OnPlatform x:Key="ActionListItemHeight" x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="50" />
+                <On Platform="Android" Value="50" />
+            </OnPlatform>
+
+            <!--End of Sizes-->
+            <!-- FONTS -->
+            <OnPlatform x:Key="MediumFontSize" x:TypeArguments="NamedSize">
+                <On Platform="iOS" Value="Medium" />
+                <On Platform="Android" Value="Body" />
+            </OnPlatform>
+            <!--End of Fonts-->
+            <!--Header Labels-->
+            <!--Text-->
+            <Style x:Key="CommonTextStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="AppH1TextStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonTextStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppPrimaryTextColor}" />
+            </Style>
+            <Style x:Key="AppH1DarkTextStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource AppH1TextStyle}">
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+            </Style>
+            <Style x:Key="AppH1WhiteTextStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource AppH1TextStyle}">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+            </Style>
+            <Style x:Key="AppH2TextStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonTextStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppPrimaryTextColor}" />
+            </Style>
+            <Style x:Key="AppH2DarkTextStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource AppH2TextStyle}">
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+            </Style>
+            <Style x:Key="AppH3TextStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonTextStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Body" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppPrimaryTextColor}" />
+            </Style>
+            <Style x:Key="AppNormalTextStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonTextStyle}">
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Body" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppPrimaryTextColor}" />
+            </Style>
+            <Style x:Key="AppParagraphTextStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonTextStyle}">
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+            </Style>
+            <Style x:Key="AppParagraphTitleTextStyle"
+                    TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource AppParagraphTextStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <Style x:Key="AppSubTextStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonTextStyle}">
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppPrimaryTextColor}" />
+            </Style>
+
+            <Style x:Key="AppSubTextDarkStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource AppSubTextStyle}">
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppBlackColor}" />
+            </Style>
+
+            <Style x:Key="AppDescriptiveTextStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonTextStyle}">
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppPrimaryTextColor}" />
+            </Style>
+            <Style x:Key="SummaryEditLabelTextStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonTextStyle}">
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+            </Style>
+
+            <Style x:Key="SummaryDetailsLabelTextStyle"
+                    TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource SummaryEditLabelTextStyle}">
+                <Setter Property="FontSize" Value="Body" />
+            </Style>
+            <Style x:Key="SummaryDetailsLabelItalicTextStyle"
+                    TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource SummaryDetailsLabelTextStyle}">
+                <Setter Property="FontAttributes" Value="Italic" />
+            </Style>
+
+            <!--End of Text-->
+
+            <Style x:Key="CommonListHeaderLabelStyle"
+                    TargetType="{x:Type Label}">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppPrimaryTextColor}" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="PopupHeaderStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="Margin" Value="5,5,5,0" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+            </Style>
+            <Style x:Key="LegendHeaderStyle"
+                    TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonListHeaderLabelStyle}">
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+            </Style>
+
+            <Style x:Key="ListHeader1Style" TargetType="{x:Type Label}">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
+                <Setter Property="Margin" Value="0,0" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+
+            </Style>
+            <Style x:Key="ListHeader2Style" TargetType="{x:Type Label}">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
+                <Setter Property="Margin" Value="0,0" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+
+            </Style>
+            <Style x:Key="ListHeader3Style" TargetType="{x:Type Label}">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
+                <Setter Property="Margin" Value="0,0" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+
+            </Style>
+            <!--End Header Labels-->
+            <!--Form-->
+            <Style x:Key="FormItemCaptionStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource FormItemCaptionColor}" />
+                <Setter Property="Margin" Value="0,5,0,5" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="FormItemCaptionStrongStyle"
+                    TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource FormItemCaptionStyle}">
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+            </Style>
+            <Style x:Key="FormItemValueStyle" TargetType="{x:Type Label}">
+                <Setter Property="Margin" Value="0,0" />
+                <Setter Property="Padding" Value="0,0" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="DatePickerStyle" TargetType="{x:Type DatePicker}">
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="Margin" Value="0,0" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+
+            </Style>
+            <Style x:Key="CheckboxLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppPrimaryTextColor}" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="FormErrorMessageStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource ErrorColor}" />
+                <Setter Property="Margin" Value="0,0" />
+                <Setter Property="Padding" Value="0,0" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+            <Style x:Key="ClearButtonLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppBlueColor}" />
+                <Setter Property="Margin" Value="5,5,5,5" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <!--Buttons-->
+            <Style x:Key="LinkButtonLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppPrimaryTextColor}" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="TransparentButtonLabelStyle"
+                    TargetType="{x:Type Label}">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="NoWrap" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource HyperlinkColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+            </Style>
+            <Style x:Key="ClearButtonStyle" TargetType="{x:Type Button}">
+               
+                <Setter Property="Margin" Value="5,5,5,5" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+             <Style x:Key="ClearButtonBlackStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource ClearButtonStyle}">
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppDarkGrayColor}" />
+                <Setter Property="BorderColor"
+                        Value="{StaticResource AppDarkGrayColor}" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="Margin" Value="5,5,5,5" />
+                <Setter Property="HeightRequest"
+                        Value="48" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+            </Style>
+            <Style x:Key="FormButtonBlueStyle" TargetType="{x:Type Button}">
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource AppBlueColor}" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="HeightRequest"
+                        Value="{StaticResource ButtonHeight}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+            </Style>
+            <Style x:Key="FormButtonBlueDisabledStyle"
+                    TargetType="{x:Type Button}"
+                    BasedOn="{StaticResource FormButtonBlueStyle}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource AppLightBlueColor}" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+            </Style>
+            <Style x:Key="FormButtonWhiteStyle" TargetType="{x:Type Button}">
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource WhiteColor}" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppBlueColor}" />
+                <Setter Property="HeightRequest"
+                        Value="{StaticResource ButtonHeight}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="BorderColor" Value="#DCDFE2" />
+                <Setter Property="BorderWidth" Value="1" />
+            </Style>
+            <Style x:Key="FormButtonWhiteDisabledStyle"
+                    TargetType="{x:Type Button}"
+                    BasedOn="{StaticResource FormButtonWhiteStyle}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource AppLightBlueColor}" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+            </Style>
+            <Style x:Key="FormButtonBlackStyle" TargetType="{x:Type Button}"
+                    BasedOn="{StaticResource FormButtonBlueStyle}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource BlackColor}" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+            </Style>
+            <Style x:Key="FormButtonBlackDisabledStyle"
+                    TargetType="{x:Type Button}"
+                    BasedOn="{StaticResource FormButtonBlackStyle}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource BlackColor}" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+            </Style>
+            <Style x:Key="FormImageButtonBlueStyle" TargetType="{x:Type Frame}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource AppBlueColor}" />
+                <Setter Property="HeightRequest"
+                        Value="{StaticResource ButtonHeight}" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="0,0" />
+            </Style>
+            <Style x:Key="FormImageButtonBlueDisabledStyle"
+                    TargetType="{x:Type Frame}"
+                    BasedOn="{StaticResource FormImageButtonBlueStyle}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource AppLightBlueColor}" />
+            </Style>
+            <Style x:Key="FormImageButtonRedStyle" TargetType="{x:Type Frame}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource AppRedColor}" />
+                <Setter Property="HeightRequest"
+                        Value="{StaticResource ButtonHeight}" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="0,0" />
+            </Style>
+            <Style x:Key="FormImageButtonRedDisabledStyle"
+                    TargetType="{x:Type Frame}"
+                    BasedOn="{StaticResource FormImageButtonRedStyle}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource AppLightBlueColor}" />
+            </Style>
+            <Style x:Key="FormImageButtonBlueRoundStyle"
+                    TargetType="{x:Type Frame}"
+                    BasedOn="{StaticResource FormImageButtonBlueStyle}">
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="HeightRequest" Value="36" />
+                <Setter Property="Padding" Value="0,5" />
+            </Style>
+            <Style x:Key="FormImageButtonBlueRoundDisabledStyle"
+                    TargetType="{x:Type Frame}"
+                    BasedOn="{StaticResource FormImageButtonBlueRoundStyle}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource AppLightBlueColor}" />
+            </Style>
+            <Style x:Key="FormImageButtonWhiteRoundStyle"
+                    TargetType="{x:Type Frame}"
+                    BasedOn="{StaticResource FormImageButtonBlueStyle}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource WhiteColor}" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="HeightRequest" Value="25" />
+            </Style>
+            <Style x:Key="FormImageButtonBlackStyle" TargetType="{x:Type Frame}"
+                    BasedOn="{StaticResource FormImageButtonBlueStyle}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource AppBlackColor}" />
+            </Style>
+            <Style x:Key="FormImageButtonTransparentStyle"
+                    TargetType="{x:Type ContentView}">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="Margin" Value="0,2,0,2" />
+                <Setter Property="HeightRequest"
+                        Value="{StaticResource ButtonHeight}" />
+            </Style>
+            <Style x:Key="SummaryEditButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppSummaryEditBlueColor}" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <!--End Buttons-->
+            <Style x:Key="RadioButtonLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+            <Style x:Key="FormEntryStyle"
+                    TargetType="{x:Type controls:RoundedEntry}">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource EntryBackgroundColor}" />
+                <Setter Property="BorderColor"
+                        Value="{StaticResource EntryBorderColor}" />
+                <Setter Property="PlaceholderColor"
+                        Value="{StaticResource EntryPlaceholderColor}" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource EntryTextColor}" />
+                <Setter Property="Margin" Value="0,5,0,5" />
+                <Setter Property="HeightRequest"
+                        Value="{StaticResource TextEntryHeight}" />
+                <Setter Property="CornerRadius" Value="0" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="FormRoundedEntryClearBorderStyle"
+                    TargetType="{x:Type controls:RoundedEntry}"
+                    BasedOn="{StaticResource FormEntryStyle}">
+                <Setter Property="BorderColor" Value="Transparent" />
+            </Style>
+            <Style x:Key="SearchEntryStyle" TargetType="{x:Type SearchBar}">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource EntryBackgroundColor}" />
+                <Setter Property="PlaceholderColor"
+                        Value="{StaticResource EntryPlaceholderColor}" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource EntryTextColor}" />
+                <Setter Property="Margin" Value="0,5,0,5" />
+                <Setter Property="HeightRequest"
+                        Value="{StaticResource TextEntryHeight}" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="FormEditorStyle"
+                    TargetType="{x:Type controls:ExtendedEditor}">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource EntryBackgroundColor}" />
+                <Setter Property="PlaceholderColor"
+                        Value="{StaticResource EntryPlaceholderColor}" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource EntryTextColor}" />
+                <Setter Property="Margin" Value="0,5,0,5" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="ButtonLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="NoWrap" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+            </Style>
+            <Style x:Key="LegendButtonLabelStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource ButtonLabelStyle}">
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppSummaryEditBlueColor}" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+                <Setter Property="Margin" Value="2,2,15,2" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="LegendButtonAccesibilityStyle" TargetType="{x:Type Button}"
+                   >
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppSummaryEditBlueColor}" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+                <Setter Property="Margin" Value="2,2,15,2" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+            <!--End Form-->
+            <!--Page-->
+            <Style x:Key="PageHeaderStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonTextStyle}">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppTitleTextColor}" />
+                <Setter Property="Margin" Value="5,2,5,2" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+            <Style x:Key="PageSubHeaderStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontSize" Value="11" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppTitleTextColor}" />
+                <Setter Property="Margin" Value="5,0,5,5" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="ListItemSeparatorStyle" TargetType="{x:Type BoxView}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource ListItemSeparatorColor}" />
+
+            </Style>
+            <Style x:Key="SettingsHeaderStyle" TargetType="{x:Type Label}">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="#333333" />
+                <Setter Property="Margin" Value="10,1,10,1" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource MediumFontSize}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <!--End Page-->
+            <!--TreeView-->
+            <Style x:Key="TreeViewListEntryHeaderStyle"
+                    TargetType="{x:Type Label}">
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="TreeViewListEntryHeaderSelectedStyle"
+                    TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource TreeViewListEntryHeaderStyle}">
+            </Style>
+            <Style x:Key="TreeViewListEntryDetailStyle"
+                    TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource TreeViewListEntryHeaderStyle}">
+            </Style>
+            <!--End TreeView-->
+
+            <!--Tab Buttons-->
+            <Style x:Key="TabButtonContainerStyle"
+                    TargetType="{x:Type ContentView}">
+
+            </Style>
+
+            <Style x:Key="TabBarContainerStyle" TargetType="{x:Type Frame}">
+
+            </Style>
+            <Style x:Key="TabButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="Padding" Value="15,5" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="HeightRequest" Value="35" />
+            </Style>
+
+            <Style x:Key="TabBarContainerToggleStyle"
+                    TargetType="{x:Type Frame}"
+                    BasedOn="{StaticResource TabBarContainerStyle}">
+                <Setter Property="BackgroundColor" Value="#F1F3F5" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="BorderColor" Value="#D6D6D6" />
+                <Setter Property="HasShadow" Value="False" />
+            </Style>
+
+            <Style x:Key="TabButtonToggleStyle" TargetType="{x:Type Button}"
+                    BasedOn="{StaticResource TabButtonStyle}">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="Margin" Value="1,1" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="#6F7173" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="HeightRequest" Value="34" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="TabButtonToggleSelectedStyle"
+                    TargetType="{x:Type Button}"
+                    BasedOn="{StaticResource TabButtonToggleStyle}">
+                <Setter Property="BackgroundColor" Value="#ffffff" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppBlueColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <!--End Tab Buttons-->
+            <!--Tag Buttons-->
+            <Style x:Key="TagButtonContainerStyle"
+                    TargetType="{x:Type ContentView}">
+
+            </Style>
+
+            <Style x:Key="TagBarContainerStyle" TargetType="{x:Type Frame}">
+
+            </Style>
+            <Style x:Key="TagButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="Padding" Value="15,5" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+
+            <Style x:Key="BlackTagButtonContainerStyle"
+                    TargetType="{x:Type ContentView}"
+                    BasedOn="{StaticResource TagButtonContainerStyle}">
+            </Style>
+
+            <Style x:Key="BlackTagButtonStyle" TargetType="{x:Type Button}"
+                    BasedOn="{StaticResource TagButtonStyle}">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="Margin" Value="1,1" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderColor"
+                        Value="{StaticResource BlackColor}" />
+                <Setter Property="HeightRequest" Value="51" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+
+            </Style>
+            <Style x:Key="BlackTagButtonSelectedStyle"
+                    TargetType="{x:Type Button}"
+                    BasedOn="{StaticResource BlackTagButtonStyle}">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource BlackColor}" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="BorderColor"
+                        Value="{StaticResource BlackColor}" />
+            </Style>
+            <!--End Tag Buttons-->
+            <Style x:Key="ScrollViewStyle" TargetType="{x:Type ScrollView}">
+                <Setter Property="HorizontalScrollBarVisibility" Value="Never" />
+                <Setter Property="VerticalScrollBarVisibility" Value="Never" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="Margin" Value="0,5" />
+            </Style>
+
+            <!--ListView-->
+            <Style x:Key="CommonListLabelHeaderStyle"
+                    TargetType="{x:Type Label}">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextColor" Value="#000000" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="CommonListLabelButtonStyle"
+                    TargetType="{x:Type Button}">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="#000000" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="ListViewHeaderStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppGrayColor}" />
+                <Setter Property="Margin" Value="5,5" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+            <Style x:Key="CommonListLabelSelectedHeaderStyle"
+                    TargetType="{x:Type Label}">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppBlueColor}" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+            </Style>
+
+            <Style x:Key="MarkerLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="TextColor"
+                        Value="{StaticResource AppBlueColor}" />
+                <Setter Property="Margin" Value="1,1,1,1" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+            <Style x:Key="TableItemCaptionStyle"
+                    TargetType="{x:Type Label}">
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="BasierCircle-Bold" />
+                <Setter Property="FontSize" Value="{StaticResource MediumFontSize}" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="Margin" Value="5,10" />
+
+            </Style>
+            <Style x:Key="TableItemValueStyle" TargetType="{x:Type Label}">
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontFamily" Value="BasierCircle-Regular" />
+                <Setter Property="FontSize" Value="{StaticResource MediumFontSize}" />
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+                <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+                <Setter Property="Margin" Value="5,10" />
+            </Style>
+            <Style x:Key="OwnReportListLabelHeaderStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonListLabelHeaderStyle}">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="TextColor" Value="{StaticResource AppGrayColor}"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
+            <Style x:Key="OwnReportListItemHeaderStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonListLabelHeaderStyle}">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+            <Style x:Key="OwnReportListItemDetailsStyle" TargetType="{x:Type Label}"
+                    BasedOn="{StaticResource CommonListLabelHeaderStyle}">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="TextColor" Value="{StaticResource AppGrayColor}"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
+
+             <Style x:Key="MenuHeaderStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="Margin" Value="5,5,5,1" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <Style x:Key="MenuSubHeaderStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource MenuTextColor}" />
+                <Setter Property="Margin" Value="5,1,5,5" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <Style x:Key="MenuFooterStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource MenuTextColor}" />
+                <Setter Property="Margin" Value="5,1,5,5" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+            <Style x:Key="MenuTextStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource MenuTextColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <Style x:Key="MenuSectionSeparatorStyle" TargetType="{x:Type BoxView}">
+                <Setter Property="BackgroundColor" Value="{StaticResource MenuSectionSeparatorColor}" />
+                <Setter Property="Margin" Value="0,2,0,2" />
+            </Style>
+            <Style x:Key="MenuItemSeparatorStyle" TargetType="{x:Type BoxView}">
+                <Setter Property="BackgroundColor" Value="{StaticResource MenuSeparatorColor}" />
+                <Setter Property="Margin" Value="15, 2, 20, 0" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

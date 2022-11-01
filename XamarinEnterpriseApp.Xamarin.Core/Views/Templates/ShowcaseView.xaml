@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.ShowcaseView"
+        xmlns:views="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:viewModelBase="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.ViewModels.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:baseView="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        xmlns:effects="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Effects;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" HorizontalOptions="EndAndExpand" Orientation="Horizontal">
+            <Button HorizontalOptions="End " IsVisible="False"
+                        VerticalOptions="Center" Text="{local:Translate SkipIntro}"
+                        x:Name="SkipButton" Style="{StaticResource ClearButtonStyle}" FontSize="Medium"
+                        TextColor="{StaticResource AppDarkGrayColor}"
+                        Margin="5,5"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.HelpText="{local:Translate SkipIntroAcc}"
+                        Clicked="GetStartedButton_Clicked"/>
+            <ImageButton x:Name="CloseButton" 
+                        HorizontalOptions="End" VerticalOptions="Center"
+                        Margin="5,5,25,5" BackgroundColor="Transparent"
+                        AutomationId="Header_Close_Button" HeightRequest="24"
+                        WidthRequest="24" Clicked="Close_ButtonClcked"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.HelpText="{local:Translate IntroCloseButtonHelpText}"/>
+        </StackLayout>
+        <StackLayout  Grid.Row="1" VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand" Margin="10,10"
+                    Orientation="Vertical"  >
+             <StackLayout VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"  >
+                <Image  x:Name="ImageView" VerticalOptions="Center"
+                            HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent"
+                            Aspect="AspectFit"
+                            AutomationProperties.IsInAccessibleTree="True">
+                    <Image.GestureRecognizers>
+                        <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped" />
+                        <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped" />
+                        <SwipeGestureRecognizer Direction="Down" Swiped="OnSwiped" />
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label x:Name="TitleLabel" HorizontalOptions="FillAndExpand"
+                       Style="{StaticResource AppH2TextStyle}" TextColor="White"
+                       FontSize="32" 
+                       HorizontalTextAlignment="Center" VerticalOptions="Center"
+                       Margin="15,5,15,5"
+                       AutomationProperties.IsInAccessibleTree="True"
+                       AutomationProperties.HelpText="{local:Translate TitleAcc}"/>
+                <Label x:Name="TextLabel" HorizontalOptions="FillAndExpand"
+                       WidthRequest="270"
+                       Style="{StaticResource AppParagraphTextStyle}"
+                       TextColor="White" LineHeight="1.2"  
+                       HorizontalTextAlignment="Center" VerticalOptions="Center"
+                       FontSize="Medium" Opacity="0.7"
+                       AutomationProperties.IsInAccessibleTree="True"
+                       AutomationProperties.HelpText="{local:Translate NormalTextAcc}"
+                       Margin="15,5,15,5"/>
+                <controls:ExtendedButton x:Name="GetStartedButton"
+                        Style="{StaticResource ClearButtonBlackStyle}"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        Text="{local:Translate GetStarted}"
+                        Clicked="GetStartedButton_Clicked"
+                        WidthRequest="120"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.HelpText="{local:Translate IntroGetStartedButtonAcc}"/>
+            </StackLayout>
+                <StackLayout x:Name="DotContainer" Orientation="Horizontal" Spacing="5"
+                        HorizontalOptions="Center" VerticalOptions="End"
+                        >
+                </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentView>
+

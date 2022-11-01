@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.ImageButtonView">
+    <Frame  x:Name="ButtonFrame" VerticalOptions="CenterAndExpand"
+            HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,0" Padding="0,5" HasShadow="False">
+        <StackLayout  VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand" Spacing="2"
+                Orientation="Horizontal">
+            <Image  x:Name="ButtonImageView" VerticalOptions="Center"
+                    HorizontalOptions="Center" BackgroundColor="Transparent"
+                    WidthRequest="24" HeightRequest="24" Margin="15,5,2,5">
+            </Image>
+            <Label  x:Name="CaptionLabel"
+                    Style="{StaticResource ButtonLabelStyle}"
+                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                    LineBreakMode="WordWrap" Margin="2,2,15,2">
+            </Label>
+        </StackLayout>
+    </Frame>
+</ContentView>

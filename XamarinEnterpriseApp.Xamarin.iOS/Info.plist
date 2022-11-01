@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>MinimumOSVersion</key>
+	<string>10.3</string>
+	<key>CFBundleDisplayName</key>
+	<string>BuitenBeter</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.companyname.enterpriseapp</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>CFBundleName</key>
+	<string>BuitenBeter</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Assets.xcassets/LaunchImage.launchimage</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>De app gebruikt uw locatiegegevens om de locatie van uw melding te bepalen op basis van uw huidige locatie. Dit is niet verplicht, u kunt ook een locatie zoeken en prikken op de kaart.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Deze applicatie gebruikt uw agenda om uw taken te beheren.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>De app gebruikt uw locatiegegevens om de locatie van uw melding te bepalen op basis van uw huidige locatie. Dit is niet verplicht, u kunt ook een locatie zoeken en prikken op de kaart.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>OpenSans-Bold.ttf</string>
+		<string>OpenSans-Regular.ttf</string>
+		<string>OpenSans-Italic.ttf</string>
+		<string>OpenSans-BoldItalic.ttf</string>
+		<string>OpenSans-Semibold.ttf</string>
+	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Deze applicatie gebruikt uw camera zodat u foto&apos;s kunt nemen en bij uw melding kunt voegen.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Deze applicatie gebruikt uw fotobibliotheek zodat u foto&apos;s aan uw verslag kunt toevoegen.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Deze applicatie gebruikt uw fotobibliotheek zodat u foto&apos;s aan uw verslag kunt toevoegen.</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>nl</string>
+		<string>en</string>
+	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>comgooglemaps</string>
+		<string>uber</string>
+		<string>waze</string>
+	</array>
+	<key>CFBundleShortVersionString</key>
+	<string>1.4.10</string>
+	<key>CFBundleVersion</key>
+	<string>1.4.10</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>De app gebruikt uw locatiegegevens om de locatie van uw melding te bepalen op basis van uw huidige locatie. Dit is niet verplicht, u kunt ook een locatie zoeken en prikken op de kaart.</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+</dict>
+</plist>

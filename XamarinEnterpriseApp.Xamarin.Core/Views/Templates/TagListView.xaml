@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.TagListView">
+    <StackLayout HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+        <Label  x:Name="CaptionLabel"
+                Style="{StaticResource FormItemCaptionStyle}" Margin="0,1" />
+        <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="Start"
+                x:Name="ItemContainer" Margin="0,1"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" Wrap="Wrap" />
+    </StackLayout>
+
+</ContentView>

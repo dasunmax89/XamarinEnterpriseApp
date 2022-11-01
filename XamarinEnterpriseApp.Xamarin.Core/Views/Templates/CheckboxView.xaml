@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.CheckboxView"
+        AutomationProperties.IsInAccessibleTree="True">
+    <StackLayout Orientation="Vertical" VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand" Spacing="0" Margin="0,5">
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand" Spacing="0">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckboxTapped" />
+            </StackLayout.GestureRecognizers>
+            <ImageButton x:Name="CheckedImageView" VerticalOptions="Center"
+                    HorizontalOptions="Center" WidthRequest="24"
+                    HeightRequest="24"
+                    BackgroundColor="Transparent"
+                    Clicked="CheckboxTapped">
+            </ImageButton>
+            <Label x:Name="CaptionLabel"
+                    Style="{StaticResource CheckboxLabelStyle}"
+                    VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                    Margin="5,5" LineBreakMode="WordWrap">
+            </Label>
+        </StackLayout>
+        <Label HorizontalOptions="Start" Margin="0,1"
+                Style="{StaticResource FormErrorMessageStyle}"
+                x:Name="ErrorLabel" AutomationProperties.IsInAccessibleTree="False" />
+    </StackLayout>
+</ContentView>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.MarkerDetailView"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:views="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        BackgroundColor="Transparent" x:Name="ViewParent" Padding="0,0" RowSpacing="0">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Frame Grid.Row="0" Padding="3,0" HorizontalOptions="FillAndExpand" HasShadow="False"
+            CornerRadius="15" VerticalOptions="CenterAndExpand" BorderColor="{StaticResource AppLightGrayColor}" Margin="0,0" BackgroundColor="White">
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                Spacing="0" >
+            <StackLayout Orientation="Vertical"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="FillAndExpand" >
+                <StackLayout  Orientation="Vertical"
+                        HorizontalOptions="FillAndExpand" Margin="10,5">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding TitleText}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            Style="{StaticResource AppH2TextStyle}"
+                            Margin="5,10,5,5" TextColor="Black" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="Center" x:Name="NavigationContainer">
+                            <ImageButton x:Name="LeftButton" HorizontalOptions="Start" VerticalOptions="Center"
+                                         Source="arrow_left_blue.png"
+                                         WidthRequest="14" HeightRequest="14"
+                                         Clicked="ArrowButton_Clicked" BackgroundColor="Transparent"
+                                         AutomationProperties.IsInAccessibleTree="True"
+                                         AutomationProperties.Name="{local:Translate BackButton}"/>
+                            <Label  
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Style="{StaticResource AppSubTextStyle}"
+                                    Margin="5,2" TextColor="{StaticResource AppBlueColor}" x:Name="IndexLabel"/>
+                            <ImageButton x:Name="RightButton"
+                                         HorizontalOptions="End" VerticalOptions="Center"
+                                         Source="arrow_right_blue.png"
+                                         WidthRequest="14" HeightRequest="14"
+                                         Clicked="ArrowButton_Clicked"  BackgroundColor="Transparent"
+                                         AutomationProperties.IsInAccessibleTree="True"
+                                         AutomationProperties.Name="{local:Translate NextButton}"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <views:TableListView DataSource="{Binding InfoList}"
+                            Caption=""
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="StartAndExpand" 
+                            Margin="0,2" />
+                </StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand" Margin="3,3">
+                    <views:ImageButtonView  
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Center" IsEnabledCustom="True"
+                                Margin="5,10"  
+                                AutomationProperties.IsInAccessibleTree="True"  
+                               >
+                        <views:ImageButtonView.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="FollowButton_Tapped"  />
+                        </views:ImageButtonView.GestureRecognizers>
+                        <views:ImageButtonView.Triggers>
+                            <DataTrigger TargetType="views:ImageButtonView" Binding="{Binding IsFollowed}" Value="True">
+                                <Setter Property="Image" Value="" />
+                                <Setter Property="Caption" Value="{local:Translate FollowedReport}" />
+                                <Setter Property="AutomationProperties.HelpText" Value="{local:Translate FollowedReport}" />
+                                <Setter Property="ActiveStyle" Value="{StaticResource FormImageButtonBlueStyle}" />
+                                <Setter Property="DisabledStyle" Value="{StaticResource FormImageButtonBlueDisabledStyle}" />
+                                <Setter Property="IsEnabledCustom" Value="False" />
+                            </DataTrigger>
+                            <DataTrigger TargetType="views:ImageButtonView" Binding="{Binding IsFollowed}" Value="False">
+                                <Setter Property="Image" Value="volgIcon_white.png" />
+                                <Setter Property="Caption" Value="{local:Translate FollowReport}" />
+                                <Setter Property="ActiveStyle" Value="{StaticResource FormImageButtonBlueStyle}" />
+                                <Setter Property="DisabledStyle" Value="{StaticResource FormImageButtonBlueDisabledStyle}" />
+                                <Setter Property="AutomationProperties.HelpText" Value="{local:Translate FollowReport}" />
+                                <Setter Property="IsEnabledCustom" Value="True" />
+                            </DataTrigger>
+                        </views:ImageButtonView.Triggers>
+                    </views:ImageButtonView>
+                    <controls:ExtendedButton Clicked="CloseButton_Tapped"
+                                Text="{local:Translate CloseWindow}"
+                                VerticalOptions="Center"
+                                ActiveStyle="{StaticResource FormButtonWhiteStyle}"
+                                DisabledStyle="{StaticResource FormButtonWhiteDisabledStyle}" BorderColor="#DCDFE2"
+                                IsEnabledCustom="True" Margin="5,0,5,10"
+                                AutomationProperties.IsInAccessibleTree="True"
+                                AutomationProperties.HelpText="{local:Translate CloseWindow}"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+    <BoxView Grid.Row="0" VerticalOptions="End" HeightRequest="15" HorizontalOptions="FillAndExpand" BackgroundColor="White" Margin="0,0,0,-5"/>
+</Grid>

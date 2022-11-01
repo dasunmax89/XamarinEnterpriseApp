@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.HeaderView"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:views="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:viewModelBase="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.ViewModels.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:baseView="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        Margin="0,0" BackgroundColor="{StaticResource AppTitleBarColor}">
+    <StackLayout Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center"
+                HorizontalOptions="Start">
+            <ImageButton x:Name="BackButton" VerticalOptions="CenterAndExpand"
+                    Margin="15,5,5,5" BackgroundColor="Transparent"
+                    HorizontalOptions="Start" Clicked="OnBackButtonTapped"
+                    IsVisible="True" AutomationId="Header_Back_Button"
+                    HeightRequest="36" WidthRequest="36">
+            </ImageButton>
+        </StackLayout>
+        <Grid VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout x:Name="HeaderBar" Grid.Row="0"
+                    Orientation="Horizontal" VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand">
+                <Grid VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" x:Name="AppTitleLabel"
+                            Style="{StaticResource PageHeaderStyle}"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="FillAndExpand" />
+                    <Image Grid.Row="0" x:Name="LogoButton"
+                            VerticalOptions="FillAndExpand" Aspect="AspectFit"
+                            HeightRequest="45" Margin="0,0"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent" />
+                </Grid>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End"
+                        VerticalOptions="CenterAndExpand" x:Name="ButtonPanel">
+                    <ImageButton Source="Search_white.png" x:Name="SearchButton"
+                            VerticalOptions="CenterAndExpand" Margin="5,5"
+                            BackgroundColor="Transparent"
+                            AutomationId="Header_Search_Button"
+                            HeightRequest="24" WidthRequest="24"
+                            Clicked="OnSearchButtonTapped" />
+                    <ImageButton Source="Settings_white.png"
+                            x:Name="SettingsButton"
+                            VerticalOptions="CenterAndExpand" Margin="5,5"
+                            BackgroundColor="Transparent"
+                            Clicked="OnSettingsButtonTapped"
+                            AutomationId="Header_Settings_Button"
+                            HeightRequest="24" WidthRequest="24" />
+                    <ImageButton Source="delete_red.png" x:Name="DeleteButton"
+                            VerticalOptions="CenterAndExpand" Margin="5,5"
+                            BackgroundColor="Transparent"
+                            Clicked="OnDeleteButtonTapped"
+                            AutomationId="Header_Delete_Button"
+                            HeightRequest="24" WidthRequest="24" />
+                    <ImageButton Source="Add_a_photo_white.png"
+                            x:Name="CameraButton"
+                            VerticalOptions="CenterAndExpand" Margin="5,5"
+                            BackgroundColor="Transparent"
+                            Clicked="OnCameraButtonTapped"
+                            AutomationId="Header_Camera_Button"
+                            HeightRequest="24" WidthRequest="24" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout x:Name="SearchBar" Grid.Row="0" IsVisible="False"
+                    Orientation="Horizontal" VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand">
+                <controls:RoundedEntry HorizontalOptions="FillAndExpand"
+                        Margin="5,0" HeightRequest="30" x:Name="SearchTextEntry"
+                        Unfocused="SearchTextEntry_Completed"
+                        Focused="SearchTextEntry_Focused"
+                        TextChanged="SearchTextEntry_TextChanged"
+                        Style="{StaticResource FormEntryStyle}"
+                        AutomationId="MapView_SearchTextEntry"
+                        Placeholder="{local:Translate Search}" CustomPadding="1" />
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentView>

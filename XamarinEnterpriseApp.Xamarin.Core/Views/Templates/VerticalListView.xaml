@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.VerticalListView">
+    <ScrollView HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" Orientation="Vertical" x:Name="ItemScrollView"
+            Style="{StaticResource ScrollViewStyle}">
+        <StackLayout x:Name="ItemContainer" Margin="0,0,0,0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" Orientation="Vertical"
+                Spacing="1" />
+    </ScrollView>
+
+</ContentView>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.CaptionLabelView"
+        xmlns:views="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:viewModelBase="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.ViewModels.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:baseView="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        xmlns:effects="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Effects;assembly=XamarinEnterpriseApp.Xamarin.Core">
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+            BackgroundColor="{StaticResource WhiteColor}" Padding="5,1">
+        <StackLayout Orientation="Vertical" VerticalOptions="Center"
+                Margin="0,1">
+            <Label  x:Name="CaptionLabel"
+                    Style="{StaticResource FormItemCaptionStyle}" Margin="5,3" />
+            <StackLayout HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal" Margin="5,3">
+                <Label x:Name="ValueLabel" HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"
+                        Style="{StaticResource FormItemValueStyle}" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentView>

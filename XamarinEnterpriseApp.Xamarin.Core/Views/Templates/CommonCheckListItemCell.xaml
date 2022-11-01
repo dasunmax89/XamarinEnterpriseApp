@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates:ExtendedViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.CommonCheckListItemCell"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core">
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"
+            Margin="0,0" Spacing="0"
+            AutomationProperties.IsInAccessibleTree="True"
+            AutomationProperties.HelpText="{Binding SubHeader}">
+        <Grid BackgroundColor="Transparent" VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand" Margin="0,0" x:Name="CellGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Text="{Binding Header}"
+                    VerticalOptions="FillAndExpand"
+                    Style="{Binding HeaderStyle}" Margin="10,5,5,5" />
+            <Image x:Name="ImgIconSource" Source="{Binding IconSource}"
+                    VerticalOptions="CenterAndExpand" Grid.Column="1"
+                    Margin="5,5,10,5">
+            </Image>
+        </Grid>
+        <BoxView HeightRequest="1"
+                Style="{StaticResource ListItemSeparatorStyle}"
+                HorizontalOptions="FillAndExpand" VerticalOptions="End" />
+    </StackLayout>
+</templates:ExtendedViewCell>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.LocationToggleView"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center"
+            BackgroundColor="Transparent" Orientation="Vertical">
+        <ImageButton  x:Name="Image_Button" VerticalOptions="Center"
+                HorizontalOptions="Center" BackgroundColor="Transparent"
+                Clicked="Image_Button_Clicked"
+                AutomationId="MapView_MyLocation_Button"
+                AutomationProperties.IsInAccessibleTree="True"
+                AutomationProperties.HelpText="{local:Translate CurrentLocationButtonText}">
+        </ImageButton>
+    </StackLayout>
+</ContentView>

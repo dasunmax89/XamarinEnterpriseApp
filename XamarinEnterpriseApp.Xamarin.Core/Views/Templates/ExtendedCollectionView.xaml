@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.ExtendedCollectionView"
+        HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+        BackgroundColor="Transparent">
+    <ScrollView HorizontalScrollBarVisibility="Never"
+            VerticalScrollBarVisibility="Never" x:Name="ScrollView"
+            HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+            Orientation="Vertical">
+        <StackLayout x:Name="ItemContainer" Margin="0,0,0,0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" Orientation="Vertical" />
+    </ScrollView>
+</ContentView>

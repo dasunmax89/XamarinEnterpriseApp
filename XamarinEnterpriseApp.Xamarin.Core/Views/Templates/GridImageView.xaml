@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.GridImageView" WidthRequest="100"
+        HeightRequest="100"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+>
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="1,10,8,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Frame  Grid.Row="0" HasShadow="False" CornerRadius="10" IsClippedToBounds="True"
+                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" >
+            <Image Source="{Binding ImageSource}"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"  BackgroundColor="Transparent"
+                Aspect="{Binding Aspect}" />
+        </Frame>
+        <StackLayout x:Name="DeleteImageButtonLayout" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End" 
+                BackgroundColor="Transparent" HeightRequest="40" WidthRequest="30" Margin="-10"
+                Orientation="Vertical">
+            <ImageButton Source="deletePhotoIcon_red.png" VerticalOptions="Center"
+                    BackgroundColor="Transparent" HorizontalOptions="Center"
+                    Clicked="Delete_ButtonClcked" HeightRequest="22" WidthRequest="22"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{local:Translate DeleteButton}">
+            </ImageButton>
+        </StackLayout>
+    </Grid>
+</ContentView>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.MarkerView"
+        HorizontalOptions="Center" VerticalOptions="Center"
+        WidthRequest="40" HeightRequest="40" AnchorX="0.5" AnchorY="1.0">
+    <Grid VerticalOptions="Center"
+            HorizontalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image  Grid.Row="0" x:Name="BackgroundImage"  
+                WidthRequest="40" HeightRequest="40" Aspect="AspectFit"
+                BackgroundColor="Transparent">
+        </Image>
+        <Label Grid.Row="0" x:Name="MarkerLabel" Style="{StaticResource MarkerLabelStyle}"
+                WidthRequest="40"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                VerticalOptions="Center"
+                 />
+    </Grid>
+</StackLayout>

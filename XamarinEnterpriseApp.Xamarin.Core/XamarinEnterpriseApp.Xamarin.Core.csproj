@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>pdbonly</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
+		<PackageReference Include="Autofac" Version="6.4.0" />
+		<PackageReference Include="IdentityModel" Version="6.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="Polly" Version="7.2.3" />
+		<PackageReference Include="Acr.UserDialogs" Version="7.2.0.564" />
+		<PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+		<PackageReference Include="Plugin.Permissions" Version="6.0.1" />
+		<PackageReference Include="Xam.Plugins.Messaging" Version="5.2.0" />
+		<PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.5.1" />
+		<PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.5.1" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+		<PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2478" />
+		<PackageReference Include="GeoCoordinate.NetCore" Version="1.0.0.1" />
+		<PackageReference Include="NUnit" Version="3.13.3" />
+		<PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
+		<PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.1.0" />
+		<PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />
+		<PackageReference Include="Xamarin.Forms.GoogleMaps" Version="4.0.0-BETA1" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Models\" />
+		<Folder Include="Views\" />
+		<Folder Include="ViewModels\" />
+		<Folder Include="Services\" />
+		<Folder Include="Ioc\" />
+		<Folder Include="Serialization\" />
+		<Folder Include="Localization\" />
+		<Folder Include="Exceptions\" />
+		<Folder Include="Helpers\" />
+		<Folder Include="Controls\" />
+		<Folder Include="Behaviors\" />
+		<Folder Include="Behaviors\Base\" />
+		<Folder Include="Constants\" />
+		<Folder Include="Dependency\" />
+		<Folder Include="Effects\" />
+		<Folder Include="Extensions\" />
+		<Folder Include="Services\Mocks\" />
+		<Folder Include="ViewModels\Base\" />
+		<Folder Include="Views\Base\" />
+		<Folder Include="Views\Templates\" />
+		<Folder Include="Models\ErrorResponses\" />
+		<Folder Include="Repositories\" />
+		<Folder Include="Repositories\Mocks\" />
+		<Folder Include="Models\Geography\" />
+		<Folder Include="Models\Areas\" />
+		<Folder Include="Models\ReportStates\" />
+		<Folder Include="Models\ReportingMethods\" />
+		<Folder Include="Models\Layouts\" />
+		<Folder Include="Models\ReportAttributes\" />
+		<Folder Include="Models\ReportFiles\" />
+		<Folder Include="Models\Workload\" />
+		<Folder Include="Models\Reporters\" />
+		<Folder Include="Models\Offenders\" />
+		<Folder Include="Models\App\" />
+		<Folder Include="Tests\" />
+		<Folder Include="Assets\" />
+		<Folder Include="Views\Interfaces\" />
+		<Folder Include="Models\Languages\" />
+		<Folder Include="Models\Base\" />
+		<Folder Include="Repositories\Entities\" />
+		<Folder Include="Models\GeoLocation\" />
+		<Folder Include="Views\Templates\TreeView\" />
+		<Folder Include="Models\Reports\AddReport\" />
+		<Folder Include="Models\App\Navigation\" />
+		<Folder Include="Models\App\UI\" />
+		<Folder Include="Views\PlacesSearchBar\" />
+		<Folder Include="Models\ReportData\" />
+		<Folder Include="Models\App\PushNotifications\" />
+		<Folder Include="Models\GeoReports\" />
+		<Folder Include="Models\App\Map\" />
+		<Folder Include="Models\MDAppConfig\" />
+		<Folder Include="Views\Templates\Map\" />
+		<Folder Include="Assets\Fonts\" />
+		<Folder Include="Models\Municipality\" />
+		<Folder Include="Views\Templates\Spans\" />
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Assets\gjpoint_icon_selected%403x.png" />
+		<EmbeddedResource Include="Assets\gjpoint_icon_selected%402x.png" />
+		<EmbeddedResource Include="Assets\gjpoint_icon.png" />
+		<EmbeddedResource Include="Assets\gjpoint_icon_selected.png" />
+		<EmbeddedResource Include="Assets\gjpoint_icon%402x.png" />
+		<EmbeddedResource Include="Assets\gjpoint_icon%403x.png" />
+		<EmbeddedResource Include="Assets\Fonts\BasierCircle-RegularItalic.otf" />
+		<EmbeddedResource Include="Assets\Fonts\BasierCircle-SemiBoldItalic.otf" />
+		<EmbeddedResource Include="Assets\Fonts\BasierCircle-SemiBold.otf" />
+		<EmbeddedResource Include="Assets\Fonts\BasierCircle-MediumItalic.otf" />
+		<EmbeddedResource Include="Assets\Fonts\BasierCircle-Medium.otf" />
+		<EmbeddedResource Include="Assets\Fonts\BasierCircle-BoldItalic.otf" />
+		<EmbeddedResource Include="Assets\Fonts\BasierCircle-Bold.otf" />
+		<EmbeddedResource Include="Assets\Fonts\BasierCircle-Regular.otf" />
+		<EmbeddedResource Include="Assets\locationCenterPin.png" />
+		<EmbeddedResource Include="Assets\locationCenterPin%402x.png" />
+		<EmbeddedResource Include="Assets\locationCenterPin%403x.png" />
+		<EmbeddedResource Include="Assets\locationCenterPin%404x.png" />
+		<EmbeddedResource Include="Assets\Fonts\ComicSans.ttf" />
+		<EmbeddedResource Include="Assets\Fonts\SegoeUI.ttf" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Localization\AppResources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Localization\AppResources.Designer.cs">
+			<DependentUpon>AppResources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="Assets\Fonts\BasierCircle-Regular.otf" />
+		<None Remove="Assets\gjpoint_icon_selected%403x.png" />
+		<None Remove="Assets\gjpoint_icon_selected%402x.png" />
+		<None Remove="Assets\gjpoint_icon.png" />
+		<None Remove="Assets\gjpoint_icon_selected.png" />
+		<None Remove="Assets\gjpoint_icon%402x.png" />
+		<None Remove="Assets\gjpoint_icon%403x.png" />
+		<None Remove="Assets\Fonts\BasierCircle-RegularItalic.otf" />
+		<None Remove="Assets\Fonts\BasierCircle-SemiBoldItalic.otf" />
+		<None Remove="Assets\Fonts\BasierCircle-SemiBold.otf" />
+		<None Remove="Assets\Fonts\BasierCircle-MediumItalic.otf" />
+		<None Remove="Assets\Fonts\BasierCircle-Medium.otf" />
+		<None Remove="Assets\Fonts\BasierCircle-BoldItalic.otf" />
+		<None Remove="Assets\Fonts\BasierCircle-Bold.otf" />
+		<None Remove="Assets\locationCenterPin.png" />
+		<None Remove="Assets\locationCenterPin%402x.png" />
+		<None Remove="Assets\locationCenterPin%403x.png" />
+		<None Remove="Assets\locationCenterPin%404x.png" />
+		<None Remove="Assets\Fonts\ComicSans.TTF" />
+		<None Remove="Assets\Fonts\SegoeUI.ttf" />
+	</ItemGroup>
+</Project>

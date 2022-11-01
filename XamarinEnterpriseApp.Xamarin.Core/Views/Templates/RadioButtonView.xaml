@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.RadioButtonView"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        >
+    <Grid VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+            RowSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" x:Name="RadioButtonImageView"
+                VerticalOptions="Center" HorizontalOptions="Center"
+                Source="{Binding ImageSource}" WidthRequest="24"
+                HeightRequest="24">
+        </Image>
+        <Label Grid.Column="1" x:Name="CaptionLabel"
+                Style="{StaticResource RadioButtonLabelStyle}"
+                VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                LineBreakMode="WordWrap">
+        </Label>
+    </Grid>
+</ContentView>

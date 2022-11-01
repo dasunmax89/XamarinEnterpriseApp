@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates:ExtendedViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+     x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.RadioButtonViewCell">
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Start"
+         VerticalOptions="Center">
+        <templates:RadioButtonView Caption="{Binding Caption}"
+            HorizontalOptions="Start" VerticalOptions="Center"
+            IsSelected="{Binding IsSelected}" >
+        </templates:RadioButtonView>
+    </StackLayout>
+</templates:ExtendedViewCell>

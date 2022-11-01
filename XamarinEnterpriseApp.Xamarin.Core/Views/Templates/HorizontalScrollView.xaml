@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.HorizontalScrollView"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+        BackgroundColor="Transparent">
+    <Grid  HorizontalOptions="FillAndExpand" VerticalOptions="Center" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <BoxView Grid.Row="0" VerticalOptions="End" HeightRequest="200" HorizontalOptions="FillAndExpand" BackgroundColor="White"/>
+        <CarouselView Grid.Row="0" HorizontalScrollBarVisibility="Never"
+                VerticalScrollBarVisibility="Never" x:Name="CarouselView"
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="EndAndExpand"
+                AutomationId="MapView_HorizontalScrollView" SizeChanged="CarouselView_SizeChanged" Scrolled="CarouselView_Scrolled">
+        </CarouselView>
+    </Grid>
+</ContentView>

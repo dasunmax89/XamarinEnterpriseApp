@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.ToggleSwitchView">
+    <StackLayout x:Name="ParentLayout" Orientation="Vertical"
+         HorizontalOptions="FillAndExpand">
+        <ImageButton x:Name="CheckedImageView" VerticalOptions="Center"
+                 HorizontalOptions="Start" WidthRequest="48" HeightRequest="24"
+                 Clicked="CheckboxTapped" BackgroundColor="Transparent">
+        </ImageButton>
+    </StackLayout>
+</ContentView>

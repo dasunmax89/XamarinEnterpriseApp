@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.RadioButtonPopupView"
+        xmlns:views="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:viewModelBase="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.ViewModels.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:baseView="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        xmlns:behaviors="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Behaviors;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+        AbsoluteLayout.LayoutFlags="All" 
+        x:Name="ViewParent"
+        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+        BackgroundColor="#CC000000">
+    <controls:ExtendedFrame HasShadow="true" HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"
+            CornerRadius="10" BackgroundColor="{StaticResource WhiteColor}"
+            Padding="5,5,5,5" Margin="10,10">
+        <controls:ExtendedFrame.BorderColor>
+            <OnPlatform x:TypeArguments="Color" iOS="Transparent"
+                    Android="{StaticResource AppGrayColor}" />
+        </controls:ExtendedFrame.BorderColor>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+                BackgroundColor="White" Orientation="Vertical" >
+            <StackLayout HorizontalOptions="FillAndExpand" Margin="5,2,5,2">
+                <Label Style="{StaticResource PopupHeaderStyle}"
+                        x:Name="TitleLabel" FontSize="Medium"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.HelpText="{Binding RadioButtonHelpText}"/>
+                <controls:RoundedEntry x:Name="SearchTextEntry"
+                        Placeholder="{local:Translate Search}"
+                        TextChanged="RoundedEntry_TextChanged"
+                        HeightRequest="{StaticResource TextEntryHeight}"
+                        Style="{StaticResource FormEntryStyle}" Margin="2,2"
+                        Keyboard="Text" BorderColor="Transparent">
+                </controls:RoundedEntry>
+            </StackLayout>
+            <ListView x:Name="ListView" HasUnevenRows="true"
+                    HorizontalOptions="FillAndExpand" SeparatorVisibility="None"
+                    VerticalOptions="Center" BackgroundColor="Transparent"
+                    Margin="5,2,5,2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <templates:RadioButtonViewCell AutomationProperties.IsInAccessibleTree="True"
+                            AutomationProperties.Name="{local:Translate Option}"
+                            AutomationProperties.HelpText="{Binding HelpText}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Behaviors>
+                    <behaviors:EventToCommandBehavior EventName="ItemTapped"
+                            Command="{Binding Source={x:Reference ViewParent}, Path=SelectedCommand}">
+                    </behaviors:EventToCommandBehavior>
+                </ListView.Behaviors>
+            </ListView>
+            <StackLayout HorizontalOptions="CenterAndExpand" Margin="5,0,5,0"
+                    Orientation="Horizontal" VerticalOptions="Start" HeightRequest="30">
+                <Button x:Name="LeftButton"
+                        Style="{StaticResource ClearButtonStyle}"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center" Text="{local:Translate Cancel}"
+                        Clicked="HandleLeftButton_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </controls:ExtendedFrame>
+</ContentView>

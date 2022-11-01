@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+	<data name="Of" xml:space="preserve">
+    <value>of</value>
+  </data>
+	<data name="Caution" xml:space="preserve">
+    <value>Let op!</value>
+  </data>
+	<data name="Done" xml:space="preserve">
+    <value>Gereed</value>
+  </data>
+	<data name="Next" xml:space="preserve">
+    <value>Volgende</value>
+  </data>
+	<data name="NextStep" xml:space="preserve">
+    <value>Volgende stap</value>
+  </data>
+	<data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+	<data name="No" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+	<data name="Close" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+	<data name="Save" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+	<data name="Cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+	<data name="Previous" xml:space="preserve">
+    <value>VORIGE</value>
+  </data>
+	<data name="Search" xml:space="preserve">
+    <value>Zoek..</value>
+  </data>
+	<data name="Settings" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+	<data name="Application" xml:space="preserve">
+    <value>Applicatie</value>
+  </data>
+	<data name="Begin" xml:space="preserve">
+    <value>BEGINNEN</value>
+  </data>
+	<data name="Ready" xml:space="preserve">
+    <value>KLAAR</value>
+  </data>
+	<data name="Or" xml:space="preserve">
+    <value>of</value>
+  </data>
+	<data name="AppName" xml:space="preserve">
+    <value>XamarinEnterprise App</value>
+  </data>
+	<data name="Email" xml:space="preserve">
+    <value>E-mailadres</value>
+  </data>
+	<data name="UserName" xml:space="preserve">
+    <value>Gebruikersnaam</value>
+  </data>
+	<data name="Password" xml:space="preserve">
+    <value>Wachtwoord</value>
+  </data>
+	<data name="Login" xml:space="preserve">
+    <value>AANMELDEN</value>
+  </data>
+	<data name="Home" xml:space="preserve">
+    <value>Beginscherm</value>
+  </data>
+	<data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+	<data name="Logout" xml:space="preserve">
+    <value>Uitloggen</value>
+  </data>
+	<data name="Language" xml:space="preserve">
+    <value>Taal</value>
+  </data>
+	<data name="ConnectivityError" xml:space="preserve">
+    <value>Verbindingsfout</value>
+  </data>
+	<data name="InternalServerError" xml:space="preserve">
+    <value>Er is een fout opgetreden tijdens het verbinden met de server.</value>
+  </data>
+	<data name="GeneralError" xml:space="preserve">
+    <value>Er is een onbekende fout opgetreden.</value>
+  </data>
+	<data name="ServerAuthenticationFailedError" xml:space="preserve">
+    <value>Er is een verificatiefout opgetreden.</value>
+  </data>
+	<data name="RemoteResourceNotFoundError" xml:space="preserve">
+    <value>Externe bron niet gevonden.</value>
+  </data>
+	<data name="BadResponseError" xml:space="preserve">
+    <value>Applicatiefout opgetreden.</value>
+  </data>
+	<data name="TaskCanceledError" xml:space="preserve">
+    <value>Taak geannuleerd.</value>
+  </data>
+	<data name="ConnectivityErrorMsg" xml:space="preserve">
+    <value>Geen verbinding met het internet mogelijk. Controleer uw internetverbinding.</value>
+  </data>
+	<data name="SessionExpiredErrorMessage" xml:space="preserve">
+    <value>Sessie is verlopen. U moet opnieuw inloggen</value>
+  </data>
+	<data name="ConfirmLogoutMessage" xml:space="preserve">
+    <value>Weet u zeker dat u wilt uitloggen?</value>
+  </data>
+	<data name="LogoutErrorMsg" xml:space="preserve">
+    <value>Er is een fout opgetreden tijdens het afmelden. Neem contact op met de beheerder.</value>
+  </data>
+	<data name="LogoutError" xml:space="preserve">
+    <value>Fout bij afmelden</value>
+  </data>
+	<data name="RequiredfieldMissingErrorMessage" xml:space="preserve">
+    <value>Veld {0} is een verplicht veld</value>
+  </data>
+	<data name="RequiredFieldAnyMissingErrorMessage" xml:space="preserve">
+    <value>Vul alstublieft minimaal één veld in</value>
+  </data>
+	<data name="Version" xml:space="preserve">
+    <value>Versie</value>
+  </data>
+	<data name="Vendor" xml:space="preserve">
+   <value>Copyright 2021 – COMPANY NAME.</value>
+  </data>
+	<data name="Map" xml:space="preserve">
+    <value>Kaart</value>
+  </data>
+	<data name="RememberCredentials" xml:space="preserve">
+    <value>Inloggegevens onthouden</value>
+  </data>
+	<data name="NoDataToShow" xml:space="preserve">
+    <value>Geen gegevens om weer te geven</value>
+  </data>
+	<data name="NoListItemToShow" xml:space="preserve">
+    <value>Geen lijstitem om weer te geven</value>
+  </data>
+	<data name="LocationRequiredMsg" xml:space="preserve">
+    <value>Locatie Toestemming is vereist om de app correct te laten werken!</value>
+  </data>
+	<data name="ChoosePreferredLanguage" xml:space="preserve">
+    <value>Kies uw voorkeurstaal</value>
+  </data>
+	<data name="FetchDataErrorMsg" xml:space="preserve">
+    <value>Er is een fout opgetreden bij het ophalen van de gegevens</value>
+  </data>
+	<data name="SelectLanguage" xml:space="preserve">
+    <value>Selecteer een taal om door te gaan</value>
+  </data>
+	<data name="LanguageSelection" xml:space="preserve">
+    <value>Taalkeuze</value>
+  </data>
+	<data name="ThisSelected" xml:space="preserve">
+    <value>{0} geselecteerd</value>
+  </data>
+	<data name="SelectItem" xml:space="preserve">
+    <value>Selecteer item</value>
+  </data>
+	<data name="SelectField" xml:space="preserve">
+    <value>Selecteer {0} om door te gaan</value>
+  </data>
+	<data name="None" xml:space="preserve">
+    <value>geen</value>
+  </data>
+	<data name="Mandatory" xml:space="preserve">
+    <value>Verplicht veld</value>
+  </data>
+	<data name="EnterValueToContinue" xml:space="preserve">
+    <value>Voer een waarde in om door te gaan!</value>
+  </data>
+	<data name="FillThisField" xml:space="preserve">
+    <value>het veld {0} moet worden ingevuld</value>
+  </data>
+	<data name="NotMatchingFields" xml:space="preserve">
+    <value>Het veld {0} moet overeenkomen met het veld {1}.</value>
+  </data>
+	<data name="NotValidField" xml:space="preserve">
+    <value>Het veld {0} bevat geen geldige waarde</value>
+  </data>
+	<data name="EnterValidField" xml:space="preserve">
+    <value>Vul een geldige {0} in</value>
+  </data>
+	<data name="EnterValidEmailMessage" xml:space="preserve">
+    <value>Laat a.u.b. een geldig e-mail adres achter</value>
+  </data>
+	<data name="NotApplicable" xml:space="preserve">
+    <value>N.A</value>
+  </data>
+	<data name="CouldntMakePhoneCall" xml:space="preserve">
+    <value>kon niet bellen</value>
+  </data>
+	<data name="SortBy" xml:space="preserve">
+    <value>Sorteren op</value>
+  </data>
+	<data name="SortType" xml:space="preserve">
+    <value>Sorteertype</value>
+  </data>
+	<data name="Descending" xml:space="preserve">
+    <value>Aflopend</value>
+  </data>
+	<data name="Ascending" xml:space="preserve">
+    <value>Oplopend</value>
+  </data>
+	<data name="Ascending" xml:space="preserve">
+    <value>Oplopend</value>
+  </data>
+	<data name="NotSet" xml:space="preserve">
+    <value>NotSet</value>
+  </data>
+	<data name="Intro1Header" xml:space="preserve">
+    <value>BuitenBeter</value>
+  </data>
+	<data name="UseThisLocation" xml:space="preserve">
+    <value>DEZE LOCATIE GEBRUIKEN</value>
+  </data>
+	<data name="UseThisObject" xml:space="preserve">
+    <value>DIT OBJECT GEBRUIKEN</value>
+  </data>
+	<data name="LocationData" xml:space="preserve">
+    <value>Locatiegegevens</value>
+  </data>
+	<data name="Place" xml:space="preserve">
+    <value>Plaats</value>
+  </data>
+	<data name="Location" xml:space="preserve">
+    <value>Locatie</value>
+  </data>
+	<data name="AtTheHeightOf" xml:space="preserve">
+    <value>Ter hoogte van</value>
+  </data>
+	<data name="SelectPlace" xml:space="preserve">
+    <value>Selecteer plaats</value>
+  </data>
+	<data name="SelectLocation" xml:space="preserve">
+    <value>Selecteer een locatie</value>
+  </data>
+	<data name="SelectItemToContinue" xml:space="preserve">
+    <value>Selecteer een item om door te gaan</value>
+  </data>
+	<data name="CategorySelection" xml:space="preserve">
+    <value>Categoriekeuze</value>
+  </data>
+	<data name="SearchCategory" xml:space="preserve">
+    <value>Zoek Categorie...</value>
+  </data>
+	<data name="Situation" xml:space="preserve">
+    <value>Situatie</value>
+  </data>
+	<data name="EditorTextEntryDescription" xml:space="preserve">
+    <value>Start hier met typen...</value>
+  </data>
+	<data name="AddImages" xml:space="preserve">
+    <value>VOEG AFBEELDINGEN TOE</value>
+  </data>
+	<data name="MakePhoto" xml:space="preserve">
+    <value>Maak foto</value>
+  </data>
+	<data name="ChooseFromPhotos" xml:space="preserve">
+    <value>Kies uit fotobibliotheek</value>
+  </data>
+	<data name="PickPhotoNotSupported" xml:space="preserve">
+    <value>Het kiezen van een foto wordt niet ondersteund.</value>
+  </data>
+	<data name="PickPhotoError" xml:space="preserve">
+    <value>Er is een fout opgetreden bij het selecteren van de foto. Controleer uw rechten.</value>
+  </data>
+	<data name="CameraNotSupported" xml:space="preserve">
+    <value>Camera wordt niet ondersteund.</value>
+  </data>
+	<data name="PermissionError" xml:space="preserve">
+    <value>U hebt geen toestemming om te bewerken -</value>
+  </data>
+	<data name="PermissionRequired" xml:space="preserve">
+    <value>MijnGemeente App vraagt toestemming</value>
+  </data>
+	<data name="TurnOnPermissionInSettings" xml:space="preserve">
+    <value>Deze app heeft geen toestemming om uw camera te gebruiken. U kunt dit aanpassen door:
+1. Navigeer naar de instellingen
+2. Zoek de MijnGemeente App op in de lijst met apps
+3. Geef de app toestemming om uw camera te gebruiken.</value>
+  </data>
+	<data name="TurnOnPermissionInSettingsDroid" xml:space="preserve">
+    <value>Deze app heeft geen toestemming om uw camera te gebruiken. U kunt dit aanpassen door:
+1. Navigeer naar de instellingen
+2. Ga naar de apps
+3. Zoek de MijnGemeente App op in de lijst met apps
+4. Ga naar de toestemmingen van de app
+5. Geef de app toestemming om uw camera te gebruiken en/of toestemming tot uw opslag met foto's</value>
+  </data>
+	<data name="Header" xml:space="preserve">
+    <value>Koptekst</value>
+  </data>
+	<data name="Label" xml:space="preserve">
+    <value>Label</value>
+  </data>
+	<data name="Button" xml:space="preserve">
+    <value>Button</value>
+  </data>
+	<data name="EnterTextInHere" xml:space="preserve">
+    <value>Voer {0} hier in</value>
+  </data>
+	<data name="Loading" xml:space="preserve">
+    <value>Aan het laden</value>
+  </data>
+	<data name="WaitMsg" xml:space="preserve">
+    <value>Wacht alstublieft...</value>
+  </data>
+	<data name="ProgressIndicator" xml:space="preserve">
+    <value>Voortgangsindicator</value>
+  </data>
+	<data name="BackToPreviousScreen" xml:space="preserve">
+    <value>Terug naar vorige scherm</value>
+  </data>
+	<data name="LogoGeementeText" xml:space="preserve">
+    <value>Dit is het logo van de {0}</value>
+  </data>
+	<data name="Active" xml:space="preserve">
+    <value>Actief</value>
+  </data>
+	<data name="InActive" xml:space="preserve">
+    <value>Inactief</value>
+  </data>
+	<data name="EnterValueFor" xml:space="preserve">
+    <value>Voer {0} in</value>
+  </data>
+	<data name="Checked" xml:space="preserve">
+    <value>Aangevinkt</value>
+  </data>
+	<data name="UnChecked" xml:space="preserve">
+    <value>Niet aangevinkt</value>
+  </data>
+	<data name="Option" xml:space="preserve">
+    <value>Optie</value>
+  </data>
+	<data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+	<data name="Address" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+	<data name="PostalCode" xml:space="preserve">
+    <value>Postcode</value>
+  </data>
+	<data name="Recidence" xml:space="preserve">
+    <value>Woonplaats</value>
+  </data>
+	<data name="TelephoneNumber" xml:space="preserve">
+    <value>Telefoonnummer</value>
+  </data>
+	<data name="InstallDocViewerMessage" xml:space="preserve">
+    <value>Installeer een compatibele documentviewer om dit document te bekijken.</value>
+  </data>
+	<data name="InstallEmailViewerMessage" xml:space="preserve">
+    <value>Installeer een compatibele e-mailapp om de e-mail samen te stellen</value>
+  </data>
+	<data name="Male" xml:space="preserve">
+    <value>Man</value>
+  </data>
+	<data name="Female" xml:space="preserve">
+    <value>Vrouw</value>
+  </data>
+	<data name="Unknown" xml:space="preserve">
+    <value>Onbekend</value>
+  </data>
+	<data name="Gender" xml:space="preserve">
+    <value>Geslacht</value>
+  </data>
+	<data name="PendingPushNotificationMessage" xml:space="preserve">
+    <value>meld u aan om de pushmelding te openen</value>
+  </data>
+	<data name="Later" xml:space="preserve">
+    <value>Later</value>
+  </data>
+	<data name="Intro1Desc" xml:space="preserve">
+    <value>Samen houden we de buurt schoon en veilig!</value>
+  </data>
+	<data name="Intro2Header" xml:space="preserve">
+    <value>Zie je iets?</value>
+  </data>
+	<data name="Intro2Desc" xml:space="preserve">
+    <value>Maak snel en eenvoudig een melding van zwerfafval, ongedierte of andere overlast in de buurt.</value>
+  </data>
+	<data name="Intro3Header" xml:space="preserve">
+    <value>Blijf op de hoogte</value>
+  </data>
+	<data name="Intro3Desc" xml:space="preserve">
+    <value>Volg de status van uw melding en ontvang bericht wanneer deze verwerkt is.</value>
+  </data>
+	<data name="Intro4Header" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+	<data name="Intro4Desc" xml:space="preserve">
+    <value>Om BuitenBeter optimaal te kunnen gebruiken hebben we toegang tot je locatie en camera nodig.</value>
+  </data>
+	<data name="SkipIntro" xml:space="preserve">
+    <value>Sla introductie over</value>
+  </data>
+	<data name="GetStarted" xml:space="preserve">
+    <value>Aan de slag!</value>
+  </data>
+	<data name="TitleAcc" xml:space="preserve">
+    <value>Title</value>
+  </data>
+	<data name="ImageAcc" xml:space="preserve">
+    <value>afbeelding</value>
+  </data>
+	<data name="NormalTextAcc" xml:space="preserve">
+    <value>Text</value>
+  </data>
+	<data name="ButtonAcc" xml:space="preserve">
+    <value>Button</value>
+  </data>
+	<data name="Intro2ImageDesc" xml:space="preserve">
+    <value>Afbeelding van een megafoon</value>
+  </data>
+	<data name="Intro1ImageDesc" xml:space="preserve">
+    <value>Afbeelding van een oog</value>
+  </data>
+	<data name="Intro3ImageDesc" xml:space="preserve">
+    <value>Afbeelding van een verstuurd bericht</value>
+  </data>
+	<data name="Intro4ImageDesc" xml:space="preserve">
+    <value>Afbeelding van een duim omhoog</value>
+  </data>
+	<data name="IntroCloseButtonHelpText" xml:space="preserve">
+    <value>Sluit de intro en ga naar het hoofdscherm</value>
+  </data>
+	<data name="IntroGetStartedButtonAcc" xml:space="preserve">
+    <value>ga naar het hoofdscherm</value>
+  </data>
+	<data name="IntroDoubleTapToNextScreen" xml:space="preserve">
+    <value>Ga naar de volgende stap door ergens op het scherm dubbel te klikken</value>
+  </data>
+</root>

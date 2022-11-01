@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates:ExtendedViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.OwnReportListItemCell"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core">
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="CenterAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Spacing="0" >
+        <Grid VerticalOptions="CenterAndExpand"
+              HorizontalOptions="FillAndExpand" 
+              RowSpacing="0" 
+              Margin="10,5,0,0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="90*" />
+            </Grid.ColumnDefinitions>
+                <Image Grid.Column="0"
+                   Source="{Binding ImageSource}" 
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand" Margin="5,0,5,0">
+                </Image>
+            <StackLayout Grid.Column="1"
+                         Margin="0,0,10,5" Padding="0"
+                         Orientation="Vertical"
+                         VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="FillAndExpand" Spacing="0" >
+                <Label Text="{Binding Header1}" 
+                       VerticalOptions="StartAndExpand"
+                       Margin="5,2" Padding="0"
+                       LineBreakMode="TailTruncation"
+                       Style="{StaticResource OwnReportListItemHeaderStyle}" 
+                       HorizontalOptions="Start"/>
+
+                <Grid VerticalOptions="CenterAndExpand"
+                      HorizontalOptions="FillAndExpand" 
+                      RowSpacing="0" 
+                      Margin="0,0,0,0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0"
+                           Text="{Binding Header2}"
+                           VerticalOptions="Center"
+                           Margin="5,0" LineBreakMode="TailTruncation"
+                           Style="{StaticResource OwnReportListItemDetailsStyle }"
+                           HorizontalTextAlignment="Start"
+                           HorizontalOptions="StartAndExpand"/>
+                    <Label Grid.Column="1"
+                           Text="{Binding Header3}" 
+                           VerticalOptions="Center"
+                           HorizontalOptions="EndAndExpand"
+                           LineBreakMode="NoWrap"
+                           Style="{StaticResource OwnReportListItemDetailsStyle }"
+                           HorizontalTextAlignment="End"/>
+                </Grid>
+
+            </StackLayout>
+        </Grid>
+        <BoxView Margin="0,0,0,0"
+            HeightRequest="1"
+            Style="{StaticResource ListItemSeparatorStyle}"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center" />
+    </StackLayout>
+
+</templates:ExtendedViewCell>

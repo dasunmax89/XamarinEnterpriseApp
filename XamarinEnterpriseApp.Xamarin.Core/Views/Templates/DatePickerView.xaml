@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.DatePickerView"
+        xmlns:views="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:viewModelBase="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.ViewModels.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:baseView="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        xmlns:effects="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Effects;assembly=XamarinEnterpriseApp.Xamarin.Core">
+    <controls:ExtendedFrame HasShadow="false" HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center" BorderColor="{StaticResource GrayColor}"
+            CornerRadius="0" x:Name="ExtendedFrame" Padding="5,1">
+        <StackLayout Orientation="Vertical" VerticalOptions="Center"
+                Margin="0,1">
+            <Label  x:Name="CaptionLabel"
+                    Style="{StaticResource FormItemCaptionStyle}" Margin="5,1" />
+            <StackLayout HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal" Margin="5,1">
+                <DatePicker x:Name="DatePickerEntry" Format="dd-MM-yyyy"
+                        DateSelected="OnDateSelected"
+                        HorizontalOptions="FillAndExpand"
+                        Style="{StaticResource DatePickerStyle}"
+                        AutomationProperties.IsInAccessibleTree="True"/>
+                <ImageButton x:Name="PickerImage" Source="Calendar.png"
+                        HorizontalOptions="End" VerticalOptions="Center"
+                        BackgroundColor="Transparent" Margin="5,0,5,5"
+                        WidthRequest="24" HeightRequest="24"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.HelpText="{local:Translate SelectDate}"/>
+            </StackLayout>
+            <BoxView HeightRequest="1"
+                    BackgroundColor="{StaticResource ErrorColor}"
+                    HorizontalOptions="FillAndExpand" Margin="5,1"
+                    x:Name="ErrorLine" />
+            <Label HorizontalOptions="Start" Margin="5,1"
+                    Style="{StaticResource FormErrorMessageStyle}"
+                    x:Name="ErrorLabel"
+                    AutomationProperties.IsInAccessibleTree="True"/>
+        </StackLayout>
+    </controls:ExtendedFrame>
+</ContentView>

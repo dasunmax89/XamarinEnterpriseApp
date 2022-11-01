@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.TabButtonView"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        Padding="0,0"
+        Margin="0,0"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core">
+    <controls:ExtendedButton x:Name="TabButton" BorderColor="Transparent"
+            Padding="5,5" Text="{Binding Header}" Clicked="TabButton_Clicked"
+            AutomationProperties.IsInAccessibleTree="True"
+            >
+    </controls:ExtendedButton>
+</ContentView>

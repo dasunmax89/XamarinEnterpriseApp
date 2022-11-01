@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.SearchEntryView"
+        xmlns:views="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:viewModelBase="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.ViewModels.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:local="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Extensions;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:baseView="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views.Base;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        xmlns:effects="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Effects;assembly=XamarinEnterpriseApp.Xamarin.Core">
+    <Frame x:Name="ContinerFrame" HasShadow="False"
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+            Padding="0,2" BorderColor="Transparent"
+            Style="{StaticResource TabBarContainerToggleStyle}"
+            CornerRadius="10">
+        <Grid  VerticalOptions="FillAndExpand" Margin="0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" VerticalOptions="Center"
+                    HorizontalOptions="Center" Source="searchIcon.png"
+                    WidthRequest="16" HeightRequest="16" Margin="10,5" />
+            <controls:RoundedEntry Grid.Column="1" x:Name="ExtendedEditor"
+                    Margin="0,0,15,0" VerticalOptions="FillAndExpand"
+                    BackgroundColor="Transparent" BorderColor="Transparent"
+                    BorderWidth="0" TextChanged="Editor_TextChanged"
+                    Completed="Entry_Completed" IsCurvedCornersEnabled="True"
+                    FontSize="Small" HeightRequest="36" />
+        </Grid>
+    </Frame>
+</ContentView>

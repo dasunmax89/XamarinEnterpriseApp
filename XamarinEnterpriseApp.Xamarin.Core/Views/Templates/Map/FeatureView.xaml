@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.FeatureView"
+        HorizontalOptions="Center" VerticalOptions="Center" AnchorX="0.5"
+        AnchorY="0.5" WidthRequest="45" HeightRequest="40"
+        Orientation="Vertical" Spacing="0" Padding="0" Margin="0">
+    <Image x:Name="BackgroundImage" WidthRequest="10" HeightRequest="10"
+            Margin="0,0" BackgroundColor="Transparent" />
+    <Label x:Name="MarkerLabel" Style="{StaticResource MarkerLabelStyle}"
+            TextColor="{StaticResource BlackColor}"
+            HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center" VerticalOptions="Start" FontSize="9"
+            Margin="2,1" Padding="0,0" FontAttributes="None" />
+</StackLayout>

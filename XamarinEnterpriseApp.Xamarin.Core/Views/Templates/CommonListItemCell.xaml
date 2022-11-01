@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.CommonListItemCell"
+        xmlns:controls="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Controls;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        AutomationProperties.IsInAccessibleTree="True"
+        IsTabStop="True" 
+        AutomationProperties.HelpText="{Binding Header}">
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"
+            Margin="0,0" Spacing="0">
+        <Grid   VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand" Margin="0,0" x:Name="CellGrid"
+                RowSpacing="0" BackgroundColor="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <controls:ExtendedButton Grid.Column="0" Text="{Binding Header}"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
+                    Style="{StaticResource CommonListLabelButtonStyle}"
+                    Margin="5,0,5,0" Clicked="Selected_ButtonClcked" HeightRequest="36"/>
+        </Grid>
+        <BoxView HeightRequest="1"
+                Style="{StaticResource ListItemSeparatorStyle}"
+                HorizontalOptions="FillAndExpand" VerticalOptions="End" />
+    </StackLayout>
+</ContentView>

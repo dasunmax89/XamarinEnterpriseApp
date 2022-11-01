@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ProjectGuid>{7BDDACC6-8C4E-42B0-9AAF-8EBDC67FB6EF}</ProjectGuid>
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+		<TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+		<OutputType>Library</OutputType>
+		<RootNamespace>XamarinEnterpriseApp.Xamarin.Droid</RootNamespace>
+		<AssemblyName>XamarinEnterpriseApp.Xamarin.Android</AssemblyName>
+		<AndroidApplication>True</AndroidApplication>
+		<AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+		<AndroidResgenClass>Resource</AndroidResgenClass>
+		<AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+		<MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+		<MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+		<TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
+		<AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+		<NuGetPackageImportStamp>
+		</NuGetPackageImportStamp>
+		<AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+		<AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>portable</DebugType>
+		<Optimize>false</Optimize>
+		<OutputPath>bin\Debug</OutputPath>
+		<DefineConstants>DEBUG;</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<AndroidHttpClientHandlerType>System.Net.Http.HttpClientHandler</AndroidHttpClientHandlerType>
+		<EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+		<AndroidSupportedAbis>armeabi-v7a;arm64-v8a;x86;x86_64</AndroidSupportedAbis>
+		<AndroidLinkMode>None</AndroidLinkMode>
+		<AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<OutputPath>bin\Release</OutputPath>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<AndroidManagedSymbols>true</AndroidManagedSymbols>
+		<AndroidHttpClientHandlerType>System.Net.Http.HttpClientHandler</AndroidHttpClientHandlerType>
+		<AndroidLinkTool>r8</AndroidLinkTool>
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="Mono.Android" />
+		<Reference Include="System" />
+		<Reference Include="System.Core" />
+		<Reference Include="System.Xml.Linq" />
+		<Reference Include="System.Xml" />
+		<Reference Include="System.Net.Http" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
+		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.1.1" />
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.4.2.1" />
+		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.14" />
+		<PackageReference Include="Xamarin.AndroidX.CardView" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.3.0.1" />
+		<PackageReference Include="Plugin.Permissions">
+			<Version>6.0.1</Version>
+		</PackageReference>
+		<PackageReference Include="Plugin.CurrentActivity">
+			<Version>2.1.0.4</Version>
+		</PackageReference>
+		<PackageReference Include="sqlite-net-pcl">
+			<Version>1.8.116</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.Forms.Maps">
+			<Version>5.0.0.2478</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.Essentials">
+			<Version>1.7.3</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.GooglePlayServices.Basement">
+			<Version>118.0.2.1</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.GooglePlayServices.Base">
+			<Version>118.0.1.1</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.Firebase.Messaging">
+			<Version>122.0.0.6</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.AppCompat.Resources">
+			<Version>1.1.0.1</Version>
+		</PackageReference>
+		<PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
+			<Version>4.1.0</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.Android.Maps.Utils">
+			<Version>0.5.0</Version>
+		</PackageReference>
+		<PackageReference Include="Com.Airbnb.Android.Lottie">
+			<Version>4.2.2</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Palette">
+			<Version>1.0.0.14</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.RecyclerView">
+			<Version>1.2.1.7</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.Google.Dagger">
+			<Version>2.41.0.1</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Core">
+			<Version>1.8.0.1</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.10" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="Resources\Resource.designer.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
+		<Compile Include="Activities\MainActivity.cs" />
+		<Compile Include="Applications\MainApplication.cs" />
+		<Compile Include="Activities\SplashActivity.cs" />
+		<Compile Include="Dependency\HttpClientManager.cs" />
+		<Compile Include="Dependency\VersionManager.cs" />
+		<Compile Include="Renderers\RoundedEntryRenderer.cs" />
+		<Compile Include="Dependency\PlatformManager.cs" />
+		<Compile Include="Renderers\ExtendedButtonRenderer.cs" />
+		<Compile Include="Helpers\FileHelper.cs" />
+		<Compile Include="Renderers\ExtendedViewCellRenderer.cs" />
+		<Compile Include="Dependency\LocationTracker.cs" />
+		<Compile Include="Dependency\Toolkit.cs" />
+		<Compile Include="Renderers\ExtendedEditorRenderer.cs" />
+		<Compile Include="Renderers\ExtendedFrameRenderer.cs" />
+		<Compile Include="Renderers\RenderUtil.cs" />
+		<Compile Include="Renderers\ExtendedTouchListener.cs" />
+		<Compile Include="Renderers\ExtendedDatePickerRenderer.cs" />
+		<Compile Include="PushNotifications\FirebaseNotificationService.cs" />
+		<Compile Include="Helpers\PushHelper.cs" />
+		<Compile Include="Extensions\PlatformExtensions.cs" />
+		<Compile Include="Renderers\ExtendedMapRenderer.cs" />
+		<Compile Include="Renderers\ExtendedHtmlLabelRenderer.cs" />
+		<Compile Include="Receivers\GPSStatusReceiver.cs" />
+		<Compile Include="Renderers\ExtendedTabbedPageRenderer.cs" />
+		<Compile Include="Dependency\PreferencesManager.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="Resources\AboutResources.txt" />
+		<None Include="Assets\AboutAssets.txt" />
+		<None Include="Properties\AndroidManifest.xml" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidResource Include="Resources\layout\Tabbar.axml" />
+		<AndroidResource Include="Resources\layout\Toolbar.axml" />
+		<AndroidResource Include="Resources\values\styles.xml" />
+		<AndroidResource Include="Resources\values\colors.xml" />
+		<AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+		<AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+		<AndroidResource Include="Resources\drawable\splash_drawable.xml" />
+		<AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+		<AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+		<AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+		<AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+		<AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+		<AndroidResource Include="Resources\drawable\FrameDrawable.xml" />
+		<AndroidResource Include="Resources\xml\file_paths.xml">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\values\strings.xml">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\raw\gjson.json">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\logo.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\logo.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\logo.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\logo.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\logo.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\logo.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\backButton.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\backButton.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\backButton.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\backButton.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\backButton.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\backButton.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\Add_a_photo_blue.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\Galery.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\Add_a_photo_blue.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\Galery.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\Add_a_photo_blue.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\Galery.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\Add_a_photo_blue.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\Galery.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\Add_a_photo_blue.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\Galery.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\Add_a_photo_blue.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\Galery.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\gjpoint_icon_selected.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\gjpoint_icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\gjpoint_icon_selected.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\gjpoint_icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\gjpoint_icon_selected.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\gjpoint_icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\gjpoint_icon_selected.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\gjpoint_icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\gjpoint_icon_selected.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\gjpoint_icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\gjpoint_icon_selected.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\gjpoint_icon.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\Checkbox_checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\Checkbox_outline.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\Checkbox_checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\Checkbox_outline.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\Checkbox_checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\Checkbox_outline.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\Checkbox_checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\Checkbox_outline.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\Checkbox_checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\Checkbox_outline.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\Checkbox_checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\Checkbox_outline.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\RadioButton_Checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\RadioButton_Unchecked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\RadioButton_Checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\RadioButton_Unchecked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\RadioButton_Checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\RadioButton_Unchecked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\RadioButton_Checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\RadioButton_Unchecked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\RadioButton_Checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\RadioButton_Unchecked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\RadioButton_Checked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\RadioButton_Unchecked.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\Toggle_off.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\Toggle_on.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\Toggle_off.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\Toggle_on.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\Toggle_off.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\Toggle_on.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\Toggle_off.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\Toggle_on.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\Toggle_off.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\Toggle_on.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\Toggle_off.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\Toggle_on.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\MyLocationCircle.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\MyLocationCircle.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\MyLocationCircle.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\MyLocationCircle.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\MyLocationCircle.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\MyLocationCircle.png">
+			<SubType>
+			</SubType>
+			<Generator>
+			</Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\closebutton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\dot_dark.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\dot_light.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\forwardbutton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\introimage1.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\introimage2.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\introimage3.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-hdpi\introimage4.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\closebutton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\dot_dark.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\dot_light.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\forwardbutton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\introimage1.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\introimage2.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\introimage3.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-mdpi\introimage4.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\closebutton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\dot_dark.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\dot_light.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\forwardbutton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\introimage1.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\introimage2.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\introimage3.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\introimage4.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\closebutton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\dot_dark.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\dot_light.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\forwardbutton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\introimage1.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\introimage2.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\introimage3.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xxhdpi\introimage4.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\closebutton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\dot_dark.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\dot_light.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\forwardbutton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\introimage1.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\introimage2.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\introimage3.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable-xhdpi\introimage4.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\closeButton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\dot_dark.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\dot_light.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\forwardButton.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\introImage1.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\introImage2.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\introImage3.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+		<AndroidResource Include="Resources\drawable\introImage4.png">
+		  <SubType></SubType>
+		  <Generator></Generator>
+		</AndroidResource>
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Resources\drawable\" />
+		<Folder Include="Resources\drawable-hdpi\" />
+		<Folder Include="Resources\drawable-xhdpi\" />
+		<Folder Include="Resources\drawable-xxhdpi\" />
+		<Folder Include="Resources\drawable-xxxhdpi\" />
+		<Folder Include="Activities\" />
+		<Folder Include="Applications\" />
+		<Folder Include="Dependency\" />
+		<Folder Include="PushNotifications\" />
+		<Folder Include="Receivers\" />
+		<Folder Include="Renderers\" />
+		<Folder Include="Resources\mipmap-hdpi\" />
+		<Folder Include="Resources\mipmap-mdpi\" />
+		<Folder Include="Resources\mipmap-xhdpi\" />
+		<Folder Include="Resources\mipmap-xxhdpi\" />
+		<Folder Include="Resources\mipmap-xxxhdpi\" />
+		<Folder Include="Helpers\" />
+		<Folder Include="Resources\xml\" />
+		<Folder Include="Resources\raw\" />
+		<Folder Include="Extensions\" />
+		<Folder Include="Resources\drawable-mdpi\" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\XamarinEnterpriseApp.Xamarin.Core\XamarinEnterpriseApp.Xamarin.Core.csproj">
+			<Project>{DA185D00-B064-4C5F-B29E-1DEE42A7F00B}</Project>
+			<Name>XamarinEnterpriseApp.Xamarin.Core</Name>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ProguardConfiguration Include="proguard.cfg" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidAsset Include="Assets\loading_animation.json" />
+	</ItemGroup>
+	<ItemGroup>
+		<GoogleServicesJson Include="google-services.json" />
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

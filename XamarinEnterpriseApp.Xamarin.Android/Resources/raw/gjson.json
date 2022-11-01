@@ -1,0 +1,677 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673781335353851,
+          50.84660256332347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6739503145217896,
+          50.84666691793194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.674143433570862,
+          50.84672957891274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.674336552619934,
+          50.84677361090296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.674513578414917,
+          50.84684473941477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.674730837345123,
+          50.84691248075376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.674929320812225,
+          50.846988689642515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.675162672996521,
+          50.84706659193348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.675358474254608,
+          50.84713941352264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.675382614135742,
+          50.84728505635988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.675312876701355,
+          50.847378199796495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.675227046012878,
+          50.8474831976293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.675114393234253,
+          50.84759666276363
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6749427318573,
+          50.84757295365389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.674744248390198,
+          50.847505213273976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6745511293411255,
+          50.84746118197427
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.674390196800232,
+          50.84741376360504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.67419707775116,
+          50.84734602299397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.674003958702087,
+          50.84728505635988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673853754997253,
+          50.847234250770626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673714280128479,
+          50.84719021921518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673537254333495,
+          50.84713941352264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673360228538513,
+          50.84709199482633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673435330390929,
+          50.846936190199145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6735265254974365,
+          50.846817642851626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673639178276061,
+          50.84673296599038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.67369282245636,
+          50.84652974089633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6737518310546875,
+          50.846417966717226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673880577087402,
+          50.84630280516172
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673955678939819,
+          50.846194417555644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6740522384643555,
+          50.84608264257316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6741273403167725,
+          50.84598102872031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6741863489151,
+          50.84590312461658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673982501029968,
+          50.845882801785514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673837661743164,
+          50.845852317522336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673666000366211,
+          50.84580151037272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6735265254974365,
+          50.84576763890893
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673333406448364,
+          50.845723605969226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.673145651817321,
+          50.845649088591976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.672968626022339,
+          50.84559828122107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.672834515571594,
+          50.84557457109569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ITHD_ID": 1745,
+        "Street": "Kasteel Schaloenstraat",
+        "Buurt": "22 Nazareth",
+        "Subcategorie": "BB overig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.672646760940552,
+          50.84577441320364
+        ]
+      }
+    }
+  ]
+}

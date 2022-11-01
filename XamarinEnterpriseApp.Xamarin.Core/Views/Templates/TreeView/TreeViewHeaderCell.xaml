@@ -1,0 +1,32 @@
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.TreeViewHeaderCell"
+        xmlns:templates="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Views;assembly=XamarinEnterpriseApp.Xamarin.Core"
+        xmlns:behaviors="clr-namespace:XamarinEnterpriseApp.Xamarin.Core.Behaviors;assembly=XamarinEnterpriseApp.Xamarin.Core">
+    <StackLayout Orientation="Vertical" BackgroundColor="Transparent"
+            VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+            Margin="10,2,0,2">
+        <Grid BackgroundColor="Transparent" VerticalOptions="Start"
+                HorizontalOptions="FillAndExpand" Margin="0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="Arrow_down.png" VerticalOptions="Center"
+                    Grid.Column="0" Margin="5,1,5,1">
+            </Image>
+            <Label Grid.Column="1" HeightRequest="40" Text="{Binding Header}"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+                    Margin="5,1,5,1" Style="{Binding HeaderStyle}" />
+            <BoxView Grid.Column="1" HeightRequest="1"
+                    Style="{StaticResource ListItemSeparatorStyle}"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="End"
+                    Margin="5,0,0,0" />
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Tree_ItemTapped" />
+            </Grid.GestureRecognizers>
+        </Grid>
+
+    </StackLayout>
+</ContentView>

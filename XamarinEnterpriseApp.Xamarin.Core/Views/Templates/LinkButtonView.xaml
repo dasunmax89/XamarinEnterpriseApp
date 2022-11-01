@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamarinEnterpriseApp.Xamarin.Core.Views.LinkButtonView">
+    <StackLayout x:Name="ParentLayout" Orientation="Vertical"
+            HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand" Margin="3">
+            <Image x:Name="ButtonImageView" VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Start" WidthRequest="24"
+                    HeightRequest="24">
+            </Image>
+            <StackLayout Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="FillAndExpand" Margin="0,2,0,0">
+                <Label x:Name="CaptionLabel"
+                        Style="{StaticResource LinkButtonLabelStyle}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        LineBreakMode="WordWrap" VerticalTextAlignment="Center">
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentView>
